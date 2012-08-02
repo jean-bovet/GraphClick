@@ -1,0 +1,214 @@
+﻿"Graph Placeholder" = "Incolla o trascina qui
+l'immagine del tuo grafico";
+"Name for new serie with index %i" = "Insieme senza titolo %i";
+
+"undefined number placeholder" = "non definito";
+"Time format (%@)" = "%@ s";
+
+"General Preference Pane Label" = "Generale";
+"Number Format Preference Pane Label" = "Formato numerico";
+"Automatic Detection Preference Pane Label" = "Identificazione";
+"Advanced Preference Pane Label" = "Avanzate";
+"Updates Preference Pane Label" = "Aggiornamenti";
+
+"Show Palette Menu Item Title" = "Mostra insiemi di dati";
+"Hide Palette Menu Item Title" = "Nascondi insiemi di dati";
+"Show Info Menu Item Title" = "Mostra informazioni";
+"Hide Info Menu Item Title" = "Nascondi informazioni";
+"Show Frame Menu Item Title" = "Mostra cornice delle coordinate";
+"Hide Frame Menu Item Title" = "Nascondi cornice delle coordinate";
+"Show Inspector Menu Item Title" = "Mostra inspector";
+"Hide Inspector Menu Item Title" = "Nascondi inspector";
+"Show Geometry Info Menu Item Title" = "Mostra informazioni geometria";
+"Hide Geometry Info Menu Item Title" = "Nascondi informazioni geometria";
+"Show Area Info Menu Item Title" = "Mostra informazioni aree";
+"Hide Area Info Menu Item Title" = "Nascondi informazioni area";
+"Rename Selected Serie Menu Item Title" = "Rinomina l'insieme dati selezionato…";
+"Rename Selected Series Menu Item Title" = "Rinomina gli insiemi dati selezionati…";
+
+"No serie to export alert title" = "Nessun insieme di dati da esportare";
+"No serie to export alert message" = "Il documento non contiene insiemi di dati da esportare.";
+"Insert error bar alert title" = "Non posso aggiungere una barra d'errore";
+"Insert error bar alert message" = "Seleziona il punto a cui aggiungere una barra d'errore. Puoi selezionare un punto usando ⇧-clic.";
+"Multiple Data Sets Selected Alert Title" = "Diversi insiemi di dati selezionati";
+"Multiple Data Sets Selected Alert Message" = "Seleziona un solo insieme di dati per inserirvi punti.";
+"Invisible Data Set Alert Title" = "Insieme di dati invisibile";
+"Invisible Data Set Alert Message" = "L'insieme di dati selezionato è invisibile. Vuoi renderlo visibile prima di inserirvi punti?";
+"Make Visible Button" = "Rendi visibile";
+"Cancel Insert Point Button" = "Annulla";
+"Export Data Sets Panel Prompt" = "Scegli";
+"Export Data Sets Panel Message" = "Scegli la cartella in cui salvare gli insiemi di dati selezionati:";
+"File Overwrite Alert Title (File: %@)" = "Il file %@ esiste già. Vuoi sostituirlo?";
+"File Overwrite Alert Message (Folder: %@, File: %@)" = "Esiste già un file con lo stesso nome in %@. Sostituirlo sovrascriverà i suoi contenuti attuali.";
+"Overwrite Button" = "Sostituisci";
+"Overwrite All Button" = "Sostituisci tutto";
+"Cancel Export Data Sets Button" = "Annulla";
+
+
+"Image Faction Toolbar Item Label" = "Opacità immagine";
+"Image Faction Toolbar Item Palette Label" = "Opacità immagine";
+"Image Faction Toolbar Item Tool Tip" = "Opacità immagine";
+"Palette Toolbar Item Label" = "Insiemi di dati";
+"Palette Toolbar Item Palette Label" = "Mostra/nascondi insiemi di dati";
+"Palette Toolbar Item Tool Tip" = "Mostra/nascondi cassetto insiemi di dati";
+"Inspector Toolbar Item Label" = "Inspector";
+"Inspector Toolbar Item Palette Label" = "Mostra/nascondi inspector";
+"Inspector Toolbar Item Tool Tip" = "Mostra/nascondi inspector";
+"Geometry Info Toolbar Item Label" = "Geometria";
+"Geometry Info Toolbar Item Palette Label" = "Mostra/nascondi informazioni geometria";
+"Geometry Info Toolbar Item Tool Tip" = "Mostra/nascondi informazioni geometria";
+"Area Info Toolbar Item Label" = "Aree";
+"Area Info Toolbar Item Palette Label" = "Mostra/Nascondi informazioni aree";
+"Area Info Toolbar Item Tool Tip" = "Mostra/Nascondi informazioni aree";
+"Selected Tool Toolbar Item Label" = "Strumento selezionato";
+"Selected Tool Toolbar Item Palette Label" = "Strumento selezionato";
+"Zoom Toolbar Item Label" = "Ridimensiona";
+"Zoom Toolbar Item Palette Label" = "Ridimensiona";
+"Zoom Toolbar Item Tool Tip" = "Fattore di ridimensionamento";
+"Tolerance Toolbar Item Label" = "Tolleranza";
+"Tolerance Toolbar Item Palette Label" = "Tolleranza";
+"Tolerance Toolbar Item Tool Tip" = "Identificazione tolleranza curva";
+"Spacing Toolbar Item Label" = "Spaziatura";
+"Spacing Toolbar Item Palette Label" = "Spaziatura";
+"Spacing Toolbar Item Tool Tip" = "Identificazione spaziatura curva";
+"Max Number Toolbar Item Label" = "Punti";
+"Max Number Toolbar Item Palette Label" = "Numero massimo di punti";
+"Max Number Toolbar Item Tool Tip" = "Numero massimo di punti identificabili";
+"Brush Size Toolbar Item Label" = "Dimensione pennello";
+"Brush Size Toolbar Item Palette Label" = "Dimensione pennello";
+"Brush Size Toolbar Item Tool Tip" = "Dimensione del pennello di mascheramento";
+
+"Unregistered Error Bar Alert Title" = "Versione non registrata";
+"Unregistered Error Bar Alert Message" = "Il valore delle barre d'errore non può essere esportato con una versione non registrata di GraphClick.";
+"Unregistered Geometry Info Alert Title" = "Versione non registrata";
+"Unregistered Geometry Info Alert Message" = "Le informazioni sulla geometria non possono essere esportate con una copia non registrate di GraphClick.";
+"Unregistered Number Alert Title" = "Versione non registrata";
+"Unregistered Number Alert Message" = "Il numero di punti che possono essere esportati con una versione non registrata di GraphClick è limitato a 10.";
+"Unregistered Area Alert Title" = "Versione non registrata";
+"Unregistered Area Alert Message" = "Il numero delle aree che possono essere esportate con una copia non registrata di GraphClick è limitato a 2.";
+"Unregistered Multiple Data Sets Alert Title" = "Versione non registrata";
+"Unregistered Multiple Data Sets Alert Message" = "Il numero di insiemi di dati che possono essere esportati simultaneamente con una copia non registrata di GraphClick è limitato a 2.";
+
+"Bug Report URL" = "http://www.arizona-software.ch/applications/graphclick/en/bugreport.php";
+"Online Tour URL" = "http://www.arizona-software.ch/graphclick/tour/";
+"Lost Serial URL" = "http://store.esellerate.net/support";
+"Homepage URL" = "http://www.arizona-software.ch/";
+"Register Button" = "Registra…";
+
+"Coordinates Inspector Title" = "Coordinate";
+"Image Inspector Title" = "Immagine";
+"Appearance Inspector Title" = "Visualizzazione";
+"Points Inspector Title" = "Punti";
+"Deformation Inspector Title" = "Deformazione";
+"Movie Inspector Title" = "Filmato";
+
+"Invalid Log Limit Value Title" = "Limite non valido";
+"Invalid Log Limit Value Message" = "Non puoi inserire valori negativi o nulli come limite di una scala logaritmica.";
+"Invalid Inverse Limit Value Title" = "Limite non valido";
+"Invalid Inverse Limit Value Message" = "Non puoi inserire il valore zero come limite di una scala inversa.";
+
+"Invalid Coordinates To Adjust Alert Title" = "Coordinate non valide";
+"Invalid Coordinates To Adjust Alert Message" = "Le posizioni e i valori delle coordinate inseriti non sono validi. Riprova.";
+
+"Max Detection Alert Title" = "Numero massimo di punti raggiunto";
+"Max Detection Alert Message" = "Alcuni punti non possono essere aggiunti perché il numero massimo di punti identificabili è stato raggiunto.";
+
+
+
+
+
+"Adjust Coordinates 1 Message" = "Fai clic sull'immagine per aggiungere punti";
+"Adjust Coordinates 2 Message" = "Fai clic sulla curva orizzontala";
+"Adjust Coordinates 3 Message" = "Fai clic sull'area";
+"Adjust Coordinates 4 Message" = "";
+"Adjust Coordinates 5 Message" = "Fai clic sull'asse delle ordinate per deformarlo";
+"Adjust Coordinates 6 Message" = "";
+"Adjust Coordinates 7 Message" = "";
+"Adjust Coordinates 8 Message" = "Fai clic sulla barra";
+"Adjust Coordinates 9 Message" = "";
+"Adjust Coordinates 10 Message" = "";
+"Adjust Coordinates 11 Message" = "Fai clic sul simbolo";
+"Adjust Coordinates 12 Message" = "Fai clic su un'area";
+"Adjust Coordinates 13 Message" = "Fai clic sulla curva";
+
+"Adjust Coordinates 100 Message" = "Seleziona un lato del grafico";
+"Adjust Coordinates 101 Message" = "Seleziona l'altro lato del grafico";
+"Adjust Coordinates 110 Message" = "Seleziona un lato del grafico";
+"Adjust Coordinates 111 Message" = "Seleziona l'altro lato del grafico";
+"Adjust Coordinates 120 Message" = "Seleziona un angolo del grafico";
+"Adjust Coordinates 121 Message" = "Seleziona l'angolo opposto del grafico";
+"Adjust Coordinates 130 Message" = "Seleziona l'angolo in basso a sinistra del grafico";
+"Adjust Coordinates 131 Message" = "Seleziona il lato destro del grafico";
+"Adjust Coordinates 132 Message" = "Seleziona il lato superiore del grafico";
+"Adjust Coordinates 200 Message" = "Seleziona l'angolo in basso a sinistra del grafico";
+"Adjust Coordinates 201 Message" = "Seleziona l'angolo in basso a destra del grafico";
+"Adjust Coordinates 202 Message" = "Seleziona l'angolo in alto a sinistra del grafico";
+"Adjust Coordinates 210 Message" = "Seleziona un lato del grafico";
+"Adjust Coordinates 211 Message" = "Seleziona l'altro lato del grafico";
+"Adjust Coordinates 212 Message" = "Seleziona un lato del grafico";
+"Adjust Coordinates 213 Message" = "Seleziona l'altro lato del grafico";
+"Adjust Coordinates 220 Message" = "Seleziona l'origine del grafico";
+"Adjust Coordinates 230 Message" = "Seleziona l'angolo in basso a sinistra del grafico";
+"Adjust Coordinates 231 Message" = "Seleziona l'angolo in basso a destra del grafico";
+"Adjust Coordinates 232 Message" = "Seleziona l'angolo in alto a sinistra del grafico";
+"Adjust Coordinates 233 Message" = "Seleziona l'angolo in alto a destra del grafico";
+"Adjust Coordinates 300 Message" = "Seleziona un primo punto del grafico";
+"Adjust Coordinates 301 Message" = "Seleziona un secondo punto del grafico";
+
+"Length Export Title" = "Lunghezza:";
+"Perimeter Export Title" = "Lunghezza:";
+"Area Export Title" = "Area:";
+"Time Export Column Header" = "t";
+"Abscissa Export Column Header" = "x";
+"Ordinate Export Column Header" = "y";
+"Stacked Time Export Column Header" = "∆t";
+"Stacked Abscissa Export Column Header" = "∆x";
+"Stacked Ordinate Export Column Header" = "∆y";
+"Delta X Min Export Column Header" = "∆x-";
+"Delta X Max Export Column Header" = "∆x+";
+"Delta Y Min Export Column Header" = "∆y-";
+"Delta Y Max Export Column Header" = "∆y+";
+"Distance Export Column Header" = "Distanza";
+"Distance Error Export Column Header" = "±";
+"Angle Export Column Header" = "Angolo";
+"Angle Error Export Column Header" = "±";
+"Speed Export Column Header" = "Velocità";
+"Speed Error Export Column Header" = "±";
+
+"No Symbol Detected Alert Title" = "Nessun simbolo identificato";
+"No Symbol Detected Alert Message" = "Nessun simbolo è stato identificato in questa posizione. Prova a selezionare un simbolo simile da qualche altra parte.";
+
+"Core Image Unavailable Title" = "Caratteristica non disponibile";
+"Core Image Unavailable Message" = "Questa caratteristica richiede Mac OS X 10.4 “Tiger” o successivi.";
+
+"Background Selected Alert Title" = "Sfondo selezionato";
+"Background Selected Alert Message" = "Il colore che hai selezionato sembra appartenere allo sfondo. Il riconoscimento può dare risultati inaspettati. Vuoi continuare?";
+"Background Selected Continue Button" = "Continua";
+"Background Selected Alternate Button" = "Annulla";
+
+"Auto Adjustment Failed Title" = "Impossibile calcolare le coordinate";
+"Auto Adjustment Failed Message" = "GraphClick non riesce a trovare un sistema di coordinate valido con le posizioni e i valori che hai inserito. Riprova con punti differenti.";
+"Poor Adjustment Found Title" = "Le coordinate non possono essere modificate correttamente";
+"Poor Adjustment Found Message" = "GraphClick non riesce a trovare un sistema di coordinate adeguato che corrisponda correttamente alle posizioni e ai valori che hai inserito. (L'algoritmo di ricerca non riesce a trovare un optimum globale.)
+
+Puoi specificare le coordinate di uno o più punti ancora per cercare di trovare un migliore sistema di coordinate, o cancellare le attuali coordinate e riprovare con punti differenti.";
+"Add Point" = "Specifica punto addizionale";
+"Ignore" = "Ignora";
+"Cancel" = "Annulla";
+
+"Default Map Adjustment Initial Prompt" = "Seleziona un primo punto di longitudine e latitudine nota";
+"Default Map Adjustment Prompt" = "Seleziona un altro punto di longitudine e latitudine nota";
+"Default Map Adjustment Initial Prompt (Abscissa)" = "Seleziona un punto di longitudine nota";
+"Default Map Adjustment Prompt (Abscissa)" = "Seleziona un altro punto di longitudine nota";
+"Default Map Adjustment Initial Prompt (Ordinate)" = "Seleziona un punto di latitudine nota";
+"Default Map Adjustment Prompt (Ordinate)" = "Seleziona un altro punto di latitudine nota";
+
+"Mercator Projection Name" = "Proiezione Mercatore";
+"Oblique Mercator Projection Name" = "Proiezione Mercatore obliqua";
+"Transverse Mercator Projection Name" = "Proiezione Mercatore trasversa";
+"Gnomonic Projection Name" = "Proiezione gnomonica";
+"Gnomonic Projection Info String" = "Al momento è supportata solo la proiezione equatoriale gnomonica.";
+
+"Select the tangent meridian" = "Seleziona il meridiano tangente";
+"Select the 'equator'" = "Seleziona 'l'equatore'";
+"Select the projection center (can be approx.)" = "Seleziona il centro di proiezione (può essere approssimativo)";

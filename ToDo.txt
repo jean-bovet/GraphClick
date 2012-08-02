@@ -1,0 +1,190 @@
+Do not forget:
+- Update/Info.plist
+
+ToDo:
+- FAQ: 3ème colonne (z), avec comment copier (càd via inspecteur "mesures")
+
+Future:
+- More map projections
+- date axis?
+- Import
+- two x axes
+? Pictures from DeltaGraph
+- Drag axis scale
+- Auto movie trajectory detection
+- Faster display (w/fromRect?)
+- Auto-focus (détection) de courbes minces
+
+Suggestions:
+- Auto-centrage
+- Graphs ternaires (cf Mail de Claude Dion)
+- Transformations d'Helmert
+- ROOT files
+- Pipette pour couleur de fond
+- Catalogue de couleurs à ignorer
+- Graduations du réticule de la loupe
+
+
+Version History:
+• 3.0
+- Map projections (Mercator, oblique Mercator, transverse Mercator, gnomonic)
+- Data sets can now be copied as columns (i.e. side by side)
+- Keep coordinates or positions of data points during copy/paste
+- Various minor bugs fixed
+
+- Hidden pref: GCNumberTimeValueNumberOfDigits
+- Supports .graphclicklicense files
+
+• 2.9.2
+- Documents with custom information
+- Zoom on cursor
+- Fixed bug with guide lines
+- Fixed bug with snap grid
+- Fixed other minor bugs
+
+• 2.9.1
+- Fixed bug causing some crashes
+- Fixed other minor bugs
+- Allow custom extensions for exported files
+
+• 2.9 (April 2006)
+- Universal application running natively on Intel-based Macs
+- Custom column and line separators
+- Preferred angle measure
+- Copy/paste points
+- Fixed bug in calculation of perimeter of area
+- Fixed other minor bugs
+- PayPal payment method accepted
+
+• 2.8.2 (February 2006)
+- Snap to grid
+- Added equations of geometry info in help
+
+• 2.8.1 (January 2006)
+- Default value of option "Keep current frame position"
+- Improved stability when working with large images
+- Fixed bug which caused document window to disappear
+
+• 2.8 (Decembre 2005)
+- Custom decimal separator
+
+• 2.8b (Decembre 2005)
+- Detect arbitrary curve
+- Use two ordinate axes
+- Horizontal & vertical guide lines
+- Print document
+- Export image
+- Point labels
+- Fixed bug where image shrank with image eraser
+- Fixed representation for numbers < 1e-15
+
+• 2.7.1 (October 2005)
+- Fixed symbol detection and other minor bugs
+- Keep column arrangment in list of data points
+
+• 2.7 (September 2005)
+- Add points on perimeter(s) of area(s)
+- Points or lines draggable with selection tool
+- Improved stability
+- New image filters:
+	- Threshold
+	- Color controls
+- Warning if background is selected
+- Zoom popup in lower left corner
+- Optional image for magnfiying glass
+- Rename selected series
+- New coordinate adjustment methods:
+	- 4 points
+	- Adjust origin
+
+• 2.6.1 (August 2005)
+- Scale selection within coordinate adjustment
+- Fixed some incompatibility with Mac OS X 10.3
+
+• 2.6 (July 2005)
+- Supports EXIF orientation
+
+• 2.6b1 (July 2005)
+- Fixed some incompatibility with Mac OS X 10.3
+
+• 2.6b (July 2005)
+- Improved stability with Mac OS X 10.4 Tiger
+- Correct importation of images with high resolution
+- Image modification (using Core Image filters)
+- Image of magnifying glass
+
+• 2.5 (April 2005)
+- Faster automatic detection
+- Automatic symbol detection
+- New methods for adjusting coordinates
+- Dynamic automatic detection
+- Geometry info
+- Customizable guide
+- Image eraser tool
+- Mask eraser
+- Pixel coordinates
+- Modifiable time origin
+- Faster automatic detection with mask
+- Optional exportation of time values
+- Export column headers
+- Multiple point insertion by dragging
+- Add symmetric error bars
+- Inspector auto resize
+- Updated update manager framework
+- Fixed delete selected deformation points
+- Fixed image eraser and auto detection bug
+- Changed column headers for stacked values
+
+• 2.4.3 (February 2005)
+- Italian Help
+
+• 2.4.2 (February 2005)
+- Fixed minor bugs
+
+• 2.4.1 (February 2005)
+- Fixed bug with incorrect ordinate values
+
+• 2.4 (February 2005)
+- French and Italian localizations
+- Frame-by-frame digitization of QuickTime movies
+- Improved user interface
+- Multiple inspectors
+- Export multiple data sets
+- Reorder data sets and points in list
+- Reload image
+- Localized decimal separator for input
+- Added license agreement
+- Open image or movie file from menu
+- Adjust size if new image too large
+- Prevent invalid limit value for log or inverse scales
+- Updated register manager
+
+• 2.3 (January 2005)
+- Mask for detecting dotted or dashed lines
+- Automatic detection of symbols or bar charts
+- Transparent documents
+- Export stacked values
+- Modify coordinates of selected points
+- Hide coordinate frame
+- Improved frame corner modification
+- Select point with shift key
+- Move selected points with option/shift arrow keys
+- Move selected points with mouse
+- Automatically add data set when adding point
+- Bug fixes
+
+• 2.2 (January 2005)
+- Arbitrary deformations
+
+• 2.1 (January 2005)
+- Documentation
+- Error bars
+- Better frame modification tool
+- Automatic curve detection parameters in window toolbar
+- Automatic curve detection cancelable
+- Faster display
+- Check for updates
+- Drag image file on application icon
+
+• 2.0 (December 2004)
+- First public release

@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelName = id; confirmName = id; }; 
+            CLASS = GCSerieRenamer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mAddIndex = NSButton; mNewName = NSTextField; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

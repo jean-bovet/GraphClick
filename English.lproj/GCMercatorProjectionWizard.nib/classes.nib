@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {confirm = id; }; 
+            CLASS = GCAdjustmentWizard; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = GCCustomProjection; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GCGenericProjection; LANGUAGE = ObjC; SUPERCLASS = GCMapProjection; }, 
+        {
+            CLASS = GCGenericProjectionWizard; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = GCMapAdjustmentWizard; 
+        }, 
+        {
+            CLASS = GCMapAdjustmentWizard; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = GCAdjustmentWizard; 
+        }, 
+        {CLASS = GCMapProjection; LANGUAGE = ObjC; SUPERCLASS = GCCustomProjection; }, 
+        {CLASS = GCMercatorProjection; LANGUAGE = ObjC; SUPERCLASS = GCMapProjection; }, 
+        {
+            CLASS = GCMercatorProjectionWizard; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = GCMapAdjustmentWizard; 
+        }
+    ); 
+    IBVersion = 1; 
+}

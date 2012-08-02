@@ -1,0 +1,27 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=x-mac-roman">
+		<title>Mask</title>
+		<meta name="description" content="This section describes the how to use a mask for automatic curve detection.">
+		<meta name="keywords" content="mask, brush, automatic, curve, dotted, dashed, detection, intersections, equally, spaced, points">
+		<meta name="robots" content="index">
+		<link href="../css/default.css" rel="stylesheet" media="all">
+	</head>
+
+	<body>
+		<csobj occur="69" w="653" h="17" t="Component" csref="../../GraphClick%20Help.data/Components/contents.html">
+			<p><img src="../images/icon.png" alt="" width="16" height="16" align="absmiddle" border="0"> <a href="../index.html" target="_top">GraphClick Help</a> &gt; <a href="index.html" target="_top">Contents</a></p>
+		</csobj>
+		<h1>Mask</h1>
+		<p>The mask defines the area where the automatic detection takes place. It is useful to digitize dotted or dashed lines:</p>
+		<ul>
+			<li>select <span class="menuitem">Mask &gt; Brush</span> (&#8984;B) and define a mask my clicking and dragging the brush cursor over the different segments of the curve
+			<li>select any tool and click on the element you want to digitize (curve, bars, symbols, etc.)</ul>
+		<p>You can also add a rectangular region to the mask by selecting <span class="menuitem">Mask &gt; Rectangle</span> (&#8984;B). To erase some part of the mask, selection <span class="menuitem">Mask &gt; Eraser</span>. To clear the whole mask at once, select <span class="menuitem">Mask &gt; Clear Mask</span>.</p>
+		<p>The brush size can be changed from the window toolbar or from the <span class="menuitem">GraphClick &gt; Preferences</span> (&#8984;,) window (under <span class="item">Detection</span>). Select <span class="menuitem">Display &gt; Customize Toolbar</span> to add or remove the item from the toolbar.</p>
+		<h2>Detecting jittery curves</h2>
+		<p>If the curve you try to digitize is too jittery, the curve detection algorithms may fail to &quot;follow&quot; the line, even if you try to change the tolerance value. In this case, you should use a mask together with the horizontal curve detection algorithm (&#8984;3), which then detects one point per abscissa, instead of following the curve.</p>
+	</body>
+
+</html>

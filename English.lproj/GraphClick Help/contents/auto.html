@@ -1,0 +1,61 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=x-mac-roman">
+		<title>Automatic detection</title>
+		<meta name="description" content="This section describes the automatic detection of (dotted) curves, symbols or bar charts and the corresponding parameters.">
+		<meta name="keywords" content="automatic, detection, curve, symbols, bar, charts, dotted, lines, intersection, tolerance, spacing, number of points, preferences, mask, brush, equally, spaced, points">
+		<meta name="robots" content="index">
+		<link href="../css/default.css" rel="stylesheet" media="all">
+	</head>
+
+	<body>
+		<csobj occur="69" w="653" h="17" t="Component" csref="../../GraphClick%20Help.data/Components/contents.html">
+			<p><img src="../images/icon.png" alt="" width="16" height="16" align="absmiddle" border="0"> <a href="../index.html" target="_top">GraphClick Help</a> &gt; <a href="index.html" target="_top">Contents</a></p>
+		</csobj>
+		<h1>Automatic detection</h1>
+		<p>To automatically add points on a curve:</p>
+		<ul>
+			<li>select <span class="menuitem">Tool &gt; Add Points on Horizontal Curve</span> (&#8984;3) or <span class="menuitem">Tool &gt; Add Points on Curve</span> (&#8984;4) and click on a point of the curve</ul>
+		<p>To automatically add points on a dotted curve, a dashed horizontal curve, if the curve intersects other lines, or if the curve is too jittery:</p>
+		<ul>
+			<li>select <span class="menuitem">Mask &gt; Brush</span> (&#8984;B) and define a mask my clicking and dragging the brush cursor over the different segments of the curve
+
+			<li>select <span class="menuitem">Tool &gt; Add Points on Horizontal Curve</span> (&#8984;3) or <span class="menuitem">Tool &gt; Add Points on Curve</span> (&#8984;4) and click on a point of the curve</ul>
+		<p><a href="help:search='mask'%20bookID='GraphClick%20Help'">Learn more about when to use a mask</a></p>
+		<p>To automatically add points on vertical or horizontal bar charts:</p>
+		<ul>
+			<li>select <span class="menuitem">Tool &gt; Add Points on Bars</span> (&#8984;5) and click on a bar</ul>
+		<p>To automatically add points on symbols:</p>
+		<ul>
+			<li>if the symbols have a unique color, try first the previous option (<span class="menuitem">Tool &gt; Add Points on Bars</span>) since it is much faster and may actually detect the symbols adequately (see the note <a href="#barsym">Detecting bars vs. symbols</a> below)<li>otherwise, select <span class="menuitem">Tool &gt; Add Points on Symbols</span> (&#8984;6) and click on a symbol</ul>
+		<p>To automatically add points on the perimeter of an area:</p>
+		<ul>
+			<li>select <span class="menuitem">Tool &gt; Add Points on Perimeter of Area</span> (&#8984;7) and click on the desired area<li>select <span class="menuitem">Tool &gt; Add Points on Perimeters of Areas</span> (&#8984;8) to detect the perimeters of all similar areas</ul>
+		<h1><a id="barsym" name="barsym"></a>Decting bars vs. symbols</h1>
+		<p>Bar detection (which find regions of similar color) is much faster than symbol detection (based on pattern matching). Therefore, if symbols can be uniquely identified by their color, it is worth trying first the bar detection, since this option may actually detect correclty the symbols you want to digitize.</p>
+		<h1>Adjust the detection parameters</h1>
+		<p>The following parameters can be modified during the automatic detection:</p>
+		<h2>Tolerance</h2>
+		<p>GraphClick decides if a certain pixel of the graph belongs to a line base on the comparison of its color with the color of the pixel you clicked onto. A tolerance of 0% means that the colors must match exactly. Try to increase or to decrease the tolerance if not all points of the curve at detected.</p>
+		<h2>Spacing</h2>
+		<p>Indicates the spacing between points that are automatically detected.</p>
+		<h2>Number of points</h2>
+		<p>When detecting a horizontal curve, select this option and enter the number of points you want to detect. The detected points are equally spaced, the limits being either the border of the detected curve, or, if a mask is being used, the left and right sides of the <a href="mask.html">mask</a> region.</p>
+		<p>Note that the values of the above parameters, as well as the maximum number of points that may be automatically detected, can be changed from the <span class="menuitem">GraphClick &gt; Preferences</span> (&#8984;,) window (under<span class="item"> Detection</span>).</p>
+		<h2>Horizontal Offset</h2>
+		<p>When detecting a horizontal curve, change this value to shift all points horizontally along the curve.</p>
+		<h2>Start at extremity</h2>
+		<p>When detecting a curve, use these options to indicate that the curve should be digitized from one of its extremity, instead of from the selected position.</p>
+		<h2>Positions</h2>
+		<p>When detecting bars, you can chose the positions where to add points for each detected bar. For instance:</p>
+		<ul>
+			<li>on the center for scattered plots			<li>on the top for vertical chart bars
+			<li>on the left and right for horizontal chart bars (including both min. and max. values)
+
+			<li>etc.
+
+		</ul>
+	</body>
+
+</html>

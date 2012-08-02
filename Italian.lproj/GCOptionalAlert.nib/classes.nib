@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {confirm = id; }; 
+            CLASS = GCOptionalAlert; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mMessageTextField = NSTextField; mTitleTextField = NSTextField; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

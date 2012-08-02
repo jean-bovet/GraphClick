@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GraphClick' target in the 'GraphClick' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {copy = id; }; 
+            CLASS = GCAreaInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mArrayController = NSArrayController; mTableView = NSTableView; }; 
+            SUPERCLASS = GCGeometryInspector; 
+        }, 
+        {
+            CLASS = GCGeometryInspector; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = GCGeometryTableColumn; LANGUAGE = ObjC; SUPERCLASS = NSTableColumn; }
+    ); 
+    IBVersion = 1; 
+}

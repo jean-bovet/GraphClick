@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=x-mac-roman">
+		<title>Tools</title>
+		<meta name="description" content="This section describes the tools which can be selected.">
+		<meta name="keywords" content="tools, modify, frame, add, guide, points, curve, dotted, dashed, symbols, bar, charts, digitize, automatically, selection, deformation, zoom, scroll, move">
+		<meta name="robots" content="index">
+		<link href="../css/default.css" rel="stylesheet" media="all">
+	</head>
+
+	<body>
+		<csobj occur="16" w="653" h="17" t="Component" csref="../../GraphClick%20Help.data/Components/contents.html">
+			<p><img src="../images/icon.png" alt="" width="16" height="16" align="absmiddle" border="0"> <a href="../index.html" target="_top">GraphClick Help</a> &gt; <a href="index.html" target="_top">Contents</a></p>
+		</csobj>
+		<h1>Adjust Coordinates (&#8984;0)</h1>
+		<p>This option let the user choose its preferred way of adjusting the coordinates of the graph by selecting different positions on the image and entering the corresponding coordinates.</p>
+		<h1>Modify Coordinate Frame</h1>
+		<p>Select this tool to modify the position of the dotted frame indicating the position of the coordinate limits. You can then drag any side or corner of the frame to match the desired position.</p>
+		<p>When dragging a corner, keep the &#8984; key down to move the selected corner only (e.g. if the image is deformed).</p>
+		<h1>Select Points (&#8984;1)</h1>
+		<p>Use this tool to select one or several points, or to move the selected points. Keep the &#8679; key down to add points to the current selection. You can also use the arrow keys to move the selected points (keep &#8679; down to move by 1/5 pixel).</p>
+		<p>To select all the points of the current data set, select <span class="menuitem">Edit &gt; Select All</span> (&#8984;A). To delete the selected points, select <span class="menuitem">Edit &gt; Delete</span> (or hit Backspace).</p>
+		<h1>Add Point (&#8984;2)</h1>
+		<p>Select this tool to add points to the current data set by clicking on the graph image. The points are added after the last selected point.</p>
+		<p>Keep the &#8679; key down to select a point. Keep the &#8984; key down to add <a href="help:search='error%20bars'%20bookID='GraphClick%20Help'">error bars</a> to the selected point.</p>
+		<h2>Guide</h2>
+		<p>When using this tool, a visual guide is displayed to help the user better locate the center of a point. To hide the guide, select <span class="menuitem">Display &gt; Guide</span> (&#8679;&#8984;G). To customize the guide, select <span class="menuitem">Display &gt; Guide Settings</span> (&#8997;&#8679;&#8984;G).</p>
+		<h2>How to use the keyboard</h2>
+		<p>If you want to use the keyboard to precisely adjust the position of the mouse cursor, go to <span class="menuitem">System Preferences &gt; Universal Access &gt; Mouse &amp; Trackpad</span> and turn the <span class="item">Mouse Keys</span> option on. (With a laptop, the numeric keypad is accessible with the <span class="item">fn</span> or <span class="item">num lock</span> key.)</p>
+		<h1>Add Points on Horizontal Curve (&#8984;3)</h1>
+		<p>Select this tool and click on a horizontal curve to automatically digitize it. The line thickness is averaged vertically, so that the data points are always in the middle of the line. For dotted or dashed lines, as well as when the curve intersects other lines, define first a <a href="help:search='mask'%20bookID='GraphClick%20Help'">mask</a> by selecting <span class="menuitem">Mask &gt; Brush</span> (&#8984;B) or <span class="menuitem">Mask &gt; Rectangle</span> (&#8984;R). When digitizing a curve with this tool, you can also specify the number of points or the spacing, as well as the horizontal offset.</p>
+		<h1>Add Points on Curve (&#8984;4)</h1>
+		<p>Select this tool and click on a curve to automatically digitize it. The line thickness is averaged, so that the data points are always in the middle of the line. With this tool, dashed lines can automatically be digitized without defining a mask.</p>
+		<h1>Add Points on Bars (&#8984;5)</h1>
+		<p>Select this tool and click on a bar to automatically digitize all similar bars found in the image. You can then choose which positions (minimum, mean or maximum along any axis) you want to include.</p>
+		<h1>Add Points on Symbols (&#8984;6)</h1>
+		<p>Select this tool and click on a symbol to automatically digitize all similar symbols found in the image.</p>
+		<p><strong>Important notice: </strong>If the symbols have a unique color, try first the previous tool (<span class="menuitem">Add Points on Bars</span>) since it is much faster and may actually detect the symbols adequately (see the section <a href="auto.html#barsym">Detecting bars vs. symbols</a>)</p>
+		<h1>Add Points on Perimeter of Area (&#8984;7)</h1>
+		<p>Select this tool and click on an area to automatically digitize its perimeter.</p>
+		<h1>Add Points on Perimeters of Areas (&#8984;8)</h1>
+		<p>Select this tool and click on an area to automatically digitize the perimeters of each similar area found in the image. To display the <a href="area.html">perimeters and areas</a> of all data sets, display the <span class="menuitem">Area Info</span> window (&#8963;&#8984;I).</p>
+		<p><a href="help:search='automatic%20detection'%20bookID='GraphClick%20Help'">Learn more about automatic detection</a></p>
+		<h1>Deform Axis</h1>
+		<p>Select this tool and click on the ordinate (y) axis to adjust the coordinate frame to a deformed axis.</p>
+		<p><a href="help:search='deformed%20axis'%20bookID='GraphClick%20Help'">Learn more about deformations</a></p>
+		<h1>Image Eraser</h1>
+		<p>Select this tool to erase some parts of the image which may reduce the performance of the automatic detection. The size of the eraser can be changed by modifying the brush size (for instance from the window toolbar).</p>
+		<h1>Zoom</h1>
+		<p>You can change the zoom of the view from the corresponding menu in the lower left corner of the window, or by selecting <span class="menuitem">Display &gt; Zoom &gt; Zoom In</span> (&#8984;+) or <span class="menuitem">Zoom Out </span>(&#8984;-).</p>
+		<p>To move the displayed graph region, use the scrollers or keep the &#8997; key down and drag the image.</p>
+		<p>Select <span class="menuitem">Display &gt; Zoom &gt; Actual Size</span> (&#8997;&#8984;1) to restore a zoom factor of 100%. Select <span class="menuitem">Display &gt; Zoom &gt; Fit In Window</span> (&#8997;&#8984;=) to adjust the zoom factor to display the entire image.</p>
+	</body>
+
+</html>

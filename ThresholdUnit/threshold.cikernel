@@ -1,0 +1,16 @@
+kernel vec4 threshold(sampler src, float value)
+{
+	vec4 pix;
+	vec3 v;
+	float val;
+	
+	pix = sample(src, samplerCoord(src));
+	val = 1.0 / 3.0;
+	v = vec3(val, val, val);
+	val = dot(pix.rgb, v) < (1.0 - value) ? 0.0 : 1.0;
+	pix.r = val;
+	pix.g = val;
+	pix.b = val;
+	
+	return pix;
+}
