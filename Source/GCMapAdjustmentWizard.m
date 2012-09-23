@@ -7,7 +7,6 @@
 //
 
 #import "GCMapAdjustmentWizard.h"
-
 #import "mrqmin.h"
 
 @implementation GCMapAdjustmentWizard

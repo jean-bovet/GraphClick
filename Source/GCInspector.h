@@ -12,7 +12,7 @@
 
 @class GCDocument;
 
-@interface GCInspector : NSWindowController {
+@interface GCInspector : NSWindowController <NSWindowDelegate> {
 	IBOutlet NSObjectController *mDocumentController;
 	IBOutlet NSTabView *mTabView;
 	

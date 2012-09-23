@@ -107,8 +107,9 @@
 				if (![value isKindOfClass:[NSString class]])
 					if ([[column identifier] isEqual:@"Number"])
 						value = [NSString stringWithFormat:@"%i", [value intValue]];
-					else
-						value = [formatter stringForFloat:[value floatValue]];
+					else {
+						value = [formatter stringForFloat:[value floatValue]];                        
+                    }
 				[string appendFormat:@"%@%@", value, [NSString columnSeparator]];
 			}
 			int l = [[NSString columnSeparator] length];
