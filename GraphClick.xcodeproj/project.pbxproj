@@ -1280,6 +1280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1301,6 +1302,7 @@
 					Quartz,
 				);
 				PRODUCT_NAME = GraphClick;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1433,6 +1435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1454,6 +1457,7 @@
 					Quartz,
 				);
 				PRODUCT_NAME = GraphClick;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
