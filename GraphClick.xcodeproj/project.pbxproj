@@ -52,7 +52,6 @@
 		A74092C608C3653E004DE9EF /* AreaInfoToolbarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A74092C508C3653E004DE9EF /* AreaInfoToolbarImage.png */; };
 		A740933408C37DEF004DE9EF /* GCAdvancedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A740933208C37DEF004DE9EF /* GCAdvancedView.m */; };
 		A740F731076C90B400B7D5A0 /* crosshair.gif in Resources */ = {isa = PBXBuildFile; fileRef = A740F730076C90B400B7D5A0 /* crosshair.gif */; };
-		A748272E08B76C5700777149 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A748272D08B76C5700777149 /* Info.plist */; };
 		A7563FD40CD0CE920013D91B /* powell.c in Sources */ = {isa = PBXBuildFile; fileRef = A7563FD00CD0CE920013D91B /* powell.c */; };
 		A7563FD60CD0CE920013D91B /* nrutil.m in Sources */ = {isa = PBXBuildFile; fileRef = A7563FD20CD0CE920013D91B /* nrutil.m */; };
 		A75645450CD11AFC0013D91B /* GCMapAdjustmentWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = A75645430CD11AFC0013D91B /* GCMapAdjustmentWizard.m */; };
@@ -422,6 +421,7 @@
 		A7D9BD280789BC8D0013A643 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "English.lproj/GraphClick Help"; sourceTree = "<group>"; };
 		A7E6449F08B62E5F00B67930 /* GCHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHistogram.h; sourceTree = "<group>"; };
 		A7E644A008B62E5F00B67930 /* GCHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHistogram.m; sourceTree = "<group>"; };
+		A7F166AA165F4201009A8D2F /* GraphClick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GraphClick.entitlements; sourceTree = "<group>"; };
 		A7F3F6C70814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
 		A7F3F6C80814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCDocument.nib; sourceTree = "<group>"; };
 		A7F3F6C90814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCInspector.nib; sourceTree = "<group>"; };
@@ -499,6 +499,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* GraphClick */ = {
 			isa = PBXGroup;
 			children = (
+				A7F166AA165F4201009A8D2F /* GraphClick.entitlements */,
 				A78C7AC10775954200B84957 /* ToDo.txt */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
@@ -819,6 +820,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Arizona Software";
 			};
 			buildConfigurationList = A730E7E6085DBAB70015E249 /* Build configuration list for PBXProject "GraphClick" */;
@@ -905,7 +907,6 @@
 				A7A13D3B080ABB6B00E0A6BD /* symbols.tiff in Resources */,
 				A7FD1B33088B052A009F4204 /* GCFilterController.nib in Resources */,
 				A7FD1E7B088B32B3009F4204 /* MagnifyingGlass.tif in Resources */,
-				A748272E08B76C5700777149 /* Info.plist in Resources */,
 				A763309108B8044A0008D548 /* area.png in Resources */,
 				A76331B708B8CA1C0008D548 /* AdvancedPreferences.tiff in Resources */,
 				A726A8C108BB533400A6745A /* areas.png in Resources */,
@@ -1278,6 +1279,8 @@
 		A730E7E4085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1285,11 +1288,11 @@
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARLicenseAgreement/universal/build/Deployment",
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARRegister/universal/build/Deployment",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -1297,7 +1300,6 @@
 					"-weak_framework",
 					Quartz,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = GraphClick;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
@@ -1312,17 +1314,19 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx10.6;
-				VALID_ARCHS = "i386 x86_64";
+				SDKROOT = "";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
 		A7614ADB08B9273E0041B1A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -1339,9 +1343,11 @@
 		A7614ADC08B9273E0041B1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -1358,6 +1364,7 @@
 		A763336408B8E5900008D548 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1365,6 +1372,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = ThresholdUnit/Info.plist;
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_STYLE = BUNDLE;
@@ -1376,7 +1384,6 @@
 					AppKit,
 				);
 				OTHER_REZFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = ThresholdUnit;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -1391,6 +1398,7 @@
 		A763336508B8E5900008D548 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1398,6 +1406,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = ThresholdUnit/Info.plist;
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				LIBRARY_STYLE = BUNDLE;
@@ -1409,7 +1418,6 @@
 					AppKit,
 				);
 				OTHER_REZFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = ThresholdUnit;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -1424,6 +1432,8 @@
 		A776CED808A2915E00C3D479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1431,11 +1441,11 @@
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARLicenseAgreement/universal/build/Deployment",
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARRegister/universal/build/Deployment",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -1443,7 +1453,6 @@
 					"-weak_framework",
 					Quartz,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = GraphClick;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
@@ -1458,8 +1467,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx10.6;
-				VALID_ARCHS = "i386 x86_64";
+				SDKROOT = "";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
