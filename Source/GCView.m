@@ -2794,7 +2794,19 @@ static BOOL sDontFocus = NO;
 
 -(void)paste:(id)inSender
 {
-	NSImage *image = [[[NSImage alloc] initWithPasteboard:[NSPasteboard generalPasteboard]] autorelease];
+    // Weird: in theory the NSImage initWithPasteboard should handle the NSFilenamesPboardType but in reality
+    // only the icon of the file is returned as the image instead of the content of it. So do it ourself.
+    NSImage *image = nil;
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    NSArray *files = [pb propertyListForType:NSFilenamesPboardType];
+    if (files.count > 0) {
+        // If a file is specified, read it manually
+        image = [[[NSImage alloc] initWithContentsOfFile:[files objectAtIndex:0]] autorelease];
+    }
+    if (nil == image) {
+        // Otherwise try the default method.
+        image = [[[NSImage alloc] initWithPasteboard:[NSPasteboard generalPasteboard]] autorelease];
+    }
 	if (image)
 		[self setStillImageAsUser:[self checkedImage:image]];
 	else if ([self canPastePoints])
