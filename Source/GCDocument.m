@@ -33,10 +33,15 @@
 
 @implementation GCDocument
 
-+(void)initialize
-{
-	[self setKeys:[NSArray arrayWithObject:@"dataSetsAsColumns"] triggerChangeNotificationsForDependentKey:@"mergeDataSets"];
-	[self setKeys:[NSArray arrayWithObject:@"multipleDataSets"] triggerChangeNotificationsForDependentKey:@"canMergeIntoSingleFile"];
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"dataSetsAsColumns"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"mergeDataSets"]];
+    }
+    if ([key isEqualToString:@"multipleDataSets"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"canMergeIntoSingleFile"]];
+    }
+    return keyPaths;
 }
 
 -(id)init
@@ -326,9 +331,9 @@
 		[mView setParameters:mLoadedViewParameters afterLoading:YES];
 	
 	id value;
-	if (value = [mLoadedDocumentParameters objectForKey:@"ContentSize"])
+	if ((value = [mLoadedDocumentParameters objectForKey:@"ContentSize"]))
 		[mDocumentWindow setContentSize:[value sizeValue]];
-	if (value = [mLoadedDocumentParameters objectForKey:@"Transparent"])
+	if ((value = [mLoadedDocumentParameters objectForKey:@"Transparent"]))
 		[self setTransparent:[value boolValue]];
 	[mView setFrameObject:mFrame];
     [self setupToolbar];
@@ -384,7 +389,7 @@
 	NSEnumerator *enumerator = [[self keysOfValuesToSaveWithFile] objectEnumerator];
 	NSString *key;
 	while (key = [enumerator nextObject])
-		if (value = [self valueForKey:key])
+		if ((value = [self valueForKey:key]))
 			[dictionary setObject:value forKey:key];
 
 	return [NSArchiver archivedDataWithRootObject:dictionary];
@@ -405,7 +410,7 @@
 	NSEnumerator *enumerator = [[self keysOfValuesToSaveWithFile] objectEnumerator];
 	NSString *key;
 	while (key = [enumerator nextObject])
-		if (value = [dictionary valueForKey:key])
+		if ((value = [dictionary valueForKey:key]))
 			[self setValue:value forKey:key];
 
 	return YES;

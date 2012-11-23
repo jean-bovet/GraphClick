@@ -18,7 +18,7 @@
 #define GCDocumentDidBecomeInactiveNotification @"GCDocumentDidBecomeInactiveNotification"
 #define GCDocumentDidChangeActiveStateNotification @"GCDocumentDidChangeActiveStateNotification"
 
-@interface GCDocument : NSDocument {
+@interface GCDocument : NSDocument <NSDrawerDelegate, NSTableViewDelegate, NSToolbarDelegate> {
 	GCFrame *mFrame;
 	NSMutableDictionary *mSettings;
 	IBOutlet GCView *mView;

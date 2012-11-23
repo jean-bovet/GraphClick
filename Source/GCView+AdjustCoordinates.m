@@ -739,7 +739,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjustAbscissa2];
 			break;
 		case GCAdjustAbscissa2:
-			if (valid = [self adjustAbscissa:0])
+			if ((valid = [self adjustAbscissa:0]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 			
@@ -747,7 +747,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjustOrdinate2];
 			break;
 		case GCAdjustOrdinate2:
-			if (valid = [self adjustOrdinate:0])
+			if ((valid = [self adjustOrdinate:0]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 			
@@ -755,12 +755,12 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjustPosition2];
 			break;
 		case GCAdjustPosition2:
-			if (valid = [self adjustAbscissaAndOrdinate:0])
+			if ((valid = [self adjustAbscissaAndOrdinate:0]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 			
 		case GCAdjustOrigin:
-			if (valid = [self adjustOrigin])
+			if ((valid = [self adjustOrigin]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 			
@@ -771,7 +771,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjustPositionB3];
 			break;
 		case GCAdjustPositionB3:
-			if (valid = [self adjustAbscissaAndOrdinate:1])
+			if ((valid = [self adjustAbscissaAndOrdinate:1]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 
@@ -782,7 +782,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjust3Points3];
 			break;
 		case GCAdjust3Points3:
-			if (valid = [self adjust3Points])
+			if ((valid = [self adjust3Points]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 
@@ -796,7 +796,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjust4Points4];
 			break;
 		case GCAdjust4Points4:
-			if (valid = [self adjust4Points])
+			if ((valid = [self adjust4Points]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 
@@ -811,7 +811,7 @@ float scaledValue(float x, GCScale sc)
 			[self setSelectedTool:GCAdjustAbscissaOrdinate4];
 			break;
 		case GCAdjustAbscissaOrdinate4:
-			if (valid = [self adjustOrdinate:1])
+			if ((valid = [self adjustOrdinate:1]))
 				[self setSelectedTool:[self nextTool]];
 			break;
 
@@ -822,6 +822,9 @@ float scaledValue(float x, GCScale sc)
 				[self setSelectedTool:[self nextTool]];
 			}
 			break;
+            
+        default:
+            break;
 	}
 	
 	if (!valid) {
@@ -882,7 +885,7 @@ float scaledValue(float x, GCScale sc)
 				[self setSelectedTool:mPreviousSelectedTool];
 				return;
 			}
-			if (valid = [self adjustScale])
+			if ((valid = [self adjustScale]))
 				[self setSelectedTool:[self nextTool]];
 			[mScalePromptWindow orderOut:nil];
 			break;

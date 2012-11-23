@@ -463,10 +463,10 @@ void maskedHorizontalMagicWand(int xmin, int xmax, int ymin, int ymax, float *po
 	int x;
 	int y;
 	float value, sum, total;
-	for (x = xmin; sKeepOnMagicWand & x <= xmax; x++) {
+	for (x = xmin; sKeepOnMagicWand & (x <= xmax); x++) {
 		total = 0;
 		sum = 0;
-		for (y = ymin; sKeepOnMagicWand & y <= ymax; y++) {
+		for (y = ymin; sKeepOnMagicWand & (y <= ymax); y++) {
 			value = VALUE(x, y);
 			total += value;
 			sum += value * y;
@@ -1087,11 +1087,13 @@ void rotateCCW45(int *dx, int *dy)
 								int c = 0;
 								do {
 									if ((c++ % ir) == 0) {
-										if (c == 1)
-											if (first)
+										if (c == 1) {
+											if (first) {
 												first = NO;
-											else
-												[self insertThreadedSeparator];
+											} else {
+												[self insertThreadedSeparator];                                                
+                                            }
+                                        }
 										[self insertThreadedSinglePoint:NSMakePoint(inBounds.origin.x + x, inBounds.origin.y + y)];
 										if (--count <= 0)
 											goto abort;
@@ -1420,7 +1422,7 @@ finish:
 
 -(void)displayMagicWandView:(int)inIndex
 {
-	NSView *view;
+	NSView *view = nil;
 	switch (inIndex) {
 		case 0:
 			view = mMagicWandDetectionView;

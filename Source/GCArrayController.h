@@ -12,7 +12,7 @@
 #define GCArrayControllerWillRemove @"GCArrayControllerWillRemove"
 #define GCArrayControllerDidRemove @"GCArrayControllerDidRemove"
 
-@interface GCArrayController : NSArrayController {
+@interface GCArrayController : NSArrayController <NSTableViewDataSource, NSTableViewDelegate> {
     IBOutlet NSTableView *mTableView;
 }
 

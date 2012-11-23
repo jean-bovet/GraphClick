@@ -60,8 +60,14 @@
 		NSEnumerator *enumerator = [inSeries objectEnumerator];
 		GCSerie *serie;
 		int index = 1;
-		while (serie = [enumerator nextObject])
-			[serie setName:[NSString stringWithFormat:addIndex ? @"%@ %i" : @"%@", name, index++]];
+		while (serie = [enumerator nextObject]) {
+            if (addIndex) {
+                [serie setName:[NSString stringWithFormat:@"%@ %i", name, index]];
+            } else {
+                [serie setName:[NSString stringWithFormat:@"%@", name]];
+            }
+            index++;            
+        }
 	}
 	[self release];
 }

@@ -182,7 +182,7 @@
 -(void)setPosition:(id)inPosition
 {
 	id value;
-	if (value = [inPosition objectForKey:@"Frame"])
+	if ((value = [inPosition objectForKey:@"Frame"]))
 		[[self window] setFrame:[value rectValue] display:NO];
 }
 

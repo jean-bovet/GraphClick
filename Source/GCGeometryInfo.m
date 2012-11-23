@@ -30,14 +30,12 @@
 
 @implementation GCGeometryInfo
 
-+(void)initialize
-{
-	NSArray *computedKeys = [NSArray arrayWithObject:@"computedValues"];
-    [GCGeometryInfo setKeys:computedKeys triggerChangeNotificationsForDependentKey:@"computedPoints"];
-    [GCGeometryInfo setKeys:computedKeys triggerChangeNotificationsForDependentKey:@"length"];
-    [GCGeometryInfo setKeys:computedKeys triggerChangeNotificationsForDependentKey:@"area"];
-    [GCGeometryInfo setKeys:computedKeys triggerChangeNotificationsForDependentKey:@"definesArea"];
-    [GCGeometryInfo setKeys:computedKeys triggerChangeNotificationsForDependentKey:@"lengthTitle"];
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"computedValues"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedPoints", @"length", @"area", @"definesArea", @"lengthTitle"]];
+    }
+    return keyPaths;
 }
 
 +(id)sharedInspector
@@ -130,7 +128,7 @@
 		rows = [mArrayController arrangedObjects];
 	
 	NSMutableDictionary *columnSplits = [NSMutableDictionary dictionary];
-	NSString *plusMinus = [NSString stringWithFormat:@" %C ", 0x00B1];
+	NSString *plusMinus = [NSString stringWithFormat:@" %C ", (unichar)0x00B1];
 	
 	NSEnumerator *rowEnumerator = [rows objectEnumerator];
 	id row;
@@ -177,7 +175,7 @@
 			[string appendString:[[column headerCell] stringValue]];
 			[string appendString:[NSString columnSeparator]];
 			for (; splits > 1; splits--)
-				[string appendFormat:@"%C%@", 0x00B1, [NSString columnSeparator]];
+				[string appendFormat:@"%C%@", (unichar)0x00B1, [NSString columnSeparator]];
 		}
 	}
 	if (hasContent) {
@@ -193,11 +191,12 @@
 			while (column = [columnEnumerator nextObject]) {
 				int splits = [columnSplits intForKey:[NSValue valueWithPointer:column]];
 				id value = [row valueForKey:[column boundValue]];
-				if (![value isKindOfClass:[NSString class]])
+				if (![value isKindOfClass:[NSString class]]) {
 					if ([[column identifier] isEqual:@"Number"])
 						value = [NSString stringWithFormat:@"%i", [value intValue]];
 					else
-						value = [formatter stringForFloat:[value floatValue]];
+						value = [formatter stringForFloat:[value floatValue]];                    
+                }
 				id values = [value componentsSeparatedByString:plusMinus];
 				int i;
 				for (i = 0; i < splits; i++) {
@@ -261,7 +260,7 @@
 
 -(float)angleFrom:(NSPoint)a at:(NSPoint)b to:(NSPoint)c
 {
-	if (a.x == b.x && a.y == b.y || c.x == b.x && c.y == b.y)
+	if ((a.x == b.x && a.y == b.y) || (c.x == b.x && c.y == b.y))
 		return nan(nil);
 	float alpha;
 	switch ([[NSUserDefaults standardUserDefaults] integerForKey:GCGeometryAngleMeasure]) {
@@ -671,7 +670,7 @@ float mean(float x, float y)
 
 	GCNumberFormatter *formatter = [GCNumberFormatter sharedFormatter];
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:GCGeometryShowError])
-		return [NSString stringWithFormat:@"%@ %C %@", [formatter stringForFloat:inValue], 0x00B1, [formatter stringForFloat:inError]];
+		return [NSString stringWithFormat:@"%@ %C %@", [formatter stringForFloat:inValue], (unichar)0x00B1, [formatter stringForFloat:inError]];
 	else
 		return [formatter stringForFloat:inValue];
 }

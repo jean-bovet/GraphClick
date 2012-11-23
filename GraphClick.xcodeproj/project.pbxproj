@@ -227,10 +227,10 @@
 		A722F02D07B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCDocument.nib; sourceTree = "<group>"; };
 		A722F02E07B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCInspector.nib; sourceTree = "<group>"; };
 		A722F02F07B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCMainMenu.nib; sourceTree = "<group>"; };
-		A722F03007B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A722F03007B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A722F03107B041F500CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A722F0E307B0EE6300CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Italian; path = Italian.lproj/Credits.rtf; sourceTree = "<group>"; };
-		A722F19707B0F1CF00CB4B21 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
+		A722F19707B0F1CF00CB4B21 /* Italian */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
 		A7245C290797063B00905209 /* InspectorToolbarImage.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = InspectorToolbarImage.tiff; sourceTree = "<group>"; };
 		A7245F2407972F4F00905209 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCInspector.nib; sourceTree = "<group>"; };
 		A7245F3207972F8D00905209 /* GCInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCInspector.h; sourceTree = "<group>"; };
@@ -290,8 +290,8 @@
 		A763346608B8E6E70008D548 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 		A763348908B8E70F0008D548 /* ThresholdFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThresholdFilter.h; sourceTree = "<group>"; };
 		A763348A08B8E70F0008D548 /* ThresholdFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThresholdFilter.m; sourceTree = "<group>"; };
-		A763349B08B8EA2B0008D548 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Description.strings; sourceTree = "<group>"; };
-		A763349D08B8EA2B0008D548 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A763349B08B8EA2B0008D548 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Description.strings; sourceTree = "<group>"; };
+		A763349D08B8EA2B0008D548 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A76334BF08B8EA6D0008D548 /* threshold.cikernel */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = threshold.cikernel; sourceTree = "<group>"; };
 		A76334C408B8EB2B0008D548 /* Description.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Description.plist; sourceTree = "<group>"; };
 		A76334FD08B8EC210008D548 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
@@ -352,11 +352,11 @@
 		A790278B0CCFEB6900DAB5DB /* GCCustomProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCustomProjection.m; sourceTree = "<group>"; };
 		A790EB3E09CAF18800DEB9D8 /* angleA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angleA.png; sourceTree = "<group>"; };
 		A790EB3F09CAF18800DEB9D8 /* angleB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angleB.png; sourceTree = "<group>"; };
-		A797A5180795AFBD006D335A /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
+		A797A5180795AFBD006D335A /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
 		A797A5190795AFBD006D335A /* French */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = French; path = French.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A797A51A0795AFBD006D335A /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCDocument.nib; sourceTree = "<group>"; };
 		A797A51B0795AFBD006D335A /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCMainMenu.nib; sourceTree = "<group>"; };
-		A797A51C0795AFBD006D335A /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A797A51C0795AFBD006D335A /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A797A51D0795AFBD006D335A /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A799E2B80DBF3991009620E6 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCPointPasteDialog.nib; sourceTree = "<group>"; };
 		A799E2B90DBF3994009620E6 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCPointPasteDialog.nib; sourceTree = "<group>"; };
@@ -412,8 +412,8 @@
 		A7D2C7DD08D57D5C008F1C4F /* Adjust4Points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adjust4Points.png; sourceTree = "<group>"; };
 		A7D2C80608D5A39A008F1C4F /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCAreaInfo.nib; sourceTree = "<group>"; };
 		A7D2C80708D5A39A008F1C4F /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCSerieRenamer.nib; sourceTree = "<group>"; };
-		A7D2C81008D5A4A5008F1C4F /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Description.strings; sourceTree = "<group>"; };
-		A7D2C81108D5A4A5008F1C4F /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7D2C81008D5A4A5008F1C4F /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Description.strings; sourceTree = "<group>"; };
+		A7D2C81108D5A4A5008F1C4F /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7D2C81E08D5AFD8008F1C4F /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCAreaInfo.nib; sourceTree = "<group>"; };
 		A7D2C82108D5AFD8008F1C4F /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCSerieRenamer.nib; sourceTree = "<group>"; };
 		A7D7393F07F0EA250056717A /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCGeometryInfo.nib; sourceTree = "<group>"; };
@@ -422,12 +422,12 @@
 		A7E6449F08B62E5F00B67930 /* GCHistogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHistogram.h; sourceTree = "<group>"; };
 		A7E644A008B62E5F00B67930 /* GCHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHistogram.m; sourceTree = "<group>"; };
 		A7F166AA165F4201009A8D2F /* GraphClick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GraphClick.entitlements; sourceTree = "<group>"; };
-		A7F3F6C70814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
+		A7F3F6C70814F04E00FA0553 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/ARLocalizable.strings; sourceTree = "<group>"; };
 		A7F3F6C80814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCDocument.nib; sourceTree = "<group>"; };
 		A7F3F6C90814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCInspector.nib; sourceTree = "<group>"; };
 		A7F3F6CA0814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCMainMenu.nib; sourceTree = "<group>"; };
-		A7F3F6CB0814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A7F3F6CC0814F04E00FA0553 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; wrapsLines = 1; };
+		A7F3F6CB0814F04E00FA0553 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7F3F6CC0814F04E00FA0553 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; wrapsLines = 1; };
 		A7F83F210DBCFC26008D27CB /* TransverseMercator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransverseMercator.png; sourceTree = "<group>"; };
 		A7F83F220DBCFC26008D27CB /* ObliqueMercator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObliqueMercator.png; sourceTree = "<group>"; };
 		A7F83F270DBCFCC2008D27CB /* ObliqueMercatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObliqueMercatorIcon.png; sourceTree = "<group>"; };
@@ -1303,6 +1303,8 @@
 				);
 				PRODUCT_NAME = GraphClick;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.8;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1366,6 +1368,7 @@
 		A763336408B8E5900008D548 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1387,7 +1390,9 @@
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ThresholdUnit;
+				PROVISIONING_PROFILE = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1400,6 +1405,7 @@
 		A763336508B8E5900008D548 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1421,7 +1427,9 @@
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ThresholdUnit;
+				PROVISIONING_PROFILE = "";
 				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1458,6 +1466,8 @@
 				);
 				PRODUCT_NAME = GraphClick;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.8;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};

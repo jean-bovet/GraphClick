@@ -188,7 +188,7 @@
 
 int compare(id ptA, id ptB, void *info)
 {
-	float a, b;
+	float a = 0, b = 0;
 	switch (((int *)info)[0]) {
 		case 0:
 			a = [ptA xCoordinate];
@@ -416,7 +416,7 @@ int compare(id ptA, id ptB, void *info)
 			GCPoint *point = [mPoints lastObject];
 			[string appendFormat:@"%@%@%@", NSLocalizedString(@"Length Export Title", @""), [NSString columnSeparator], [formatter stringForDefinedFloat:[point distance]]];
 			if (includeGeometryErrors)
-				[string appendFormat:@"%@%C%@%@", [NSString columnSeparator], 0x00B1, [NSString columnSeparator], [formatter stringForDefinedFloat:[point distanceError]]];
+				[string appendFormat:@"%@%C%@%@", [NSString columnSeparator], (unichar)0x00B1, [NSString columnSeparator], [formatter stringForDefinedFloat:[point distanceError]]];
 		}
 		[string appendFormat:@"%@%@", [NSString lineSeparator], [NSString lineSeparator]];
 	}
@@ -655,7 +655,7 @@ int compare(id ptA, id ptB, void *info)
 	int count = 0;
 	GCSerie *serie;
 	while (serie = [enumerator nextObject]) {
-		NSMutableString *string = [[NSMutableString alloc] initWithCapacity:0];
+		NSMutableString *string = [[[NSMutableString alloc] initWithCapacity:0] autorelease];
 		if (++count > 2 && unregistered) {
 			[serie displayLimitationTitle:NSLocalizedString(@"Unregistered Multiple Data Sets Alert Title", @"")
 				message:NSLocalizedString(@"Unregistered Multiple Data Sets Alert Message", @"")];

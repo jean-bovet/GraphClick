@@ -110,11 +110,15 @@
 
 @implementation GCView
 
-+(void)initialize
-{
-    [self setKeys:[NSArray arrayWithObject:@"coordinates"] triggerChangeNotificationsForDependentKey:@"xCoordinate"];
-    [self setKeys:[NSArray arrayWithObject:@"coordinates"] triggerChangeNotificationsForDependentKey:@"yCoordinate"];
-    [self setKeys:[NSArray arrayWithObject:@"magicWandProgress"] triggerChangeNotificationsForDependentKey:@"magicWandFinalProgress"];
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"coordinates"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"xCoordinate", @"yCoordinate"]];
+    }
+    if ([key isEqualToString:@"magicWandProgress"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"magicWandFinalProgress"]];
+    }
+    return keyPaths;
 }
 
 -(NSArray *)acceptedDragTypes
@@ -339,20 +343,20 @@
 -(void)setParameters:(id)inParameters afterLoading:(BOOL)inLoading
 {
 	id value;
-	if (value = [inParameters objectForKey:@"BoundsSize"])
+	if ((value = [inParameters objectForKey:@"BoundsSize"]))
 		[self setSize:[value sizeValue]];
-	if (value = [inParameters objectForKey:@"ZoomFactor"])
+	if ((value = [inParameters objectForKey:@"ZoomFactor"]))
 		[self setZoomFactor:[value floatValue]];
-	if (value = [inParameters objectForKey:@"Image"])
+	if ((value = [inParameters objectForKey:@"Image"]))
 		[self setImage:value adjustIfNeeded:NO];
-	if (value = [inParameters objectForKey:@"ImageFraction"])
+	if ((value = [inParameters objectForKey:@"ImageFraction"]))
 		[self setImageFraction:[value floatValue]];
-	if (value = [inParameters objectForKey:@"ImageAngle"])
+	if ((value = [inParameters objectForKey:@"ImageAngle"]))
 		[self setImageAngle:[value floatValue]];
-	if (value = [inParameters objectForKey:@"ImageScale"])
+	if ((value = [inParameters objectForKey:@"ImageScale"]))
 		[self setImageScale:[value floatValue]];
 	[self setMovie:[inParameters objectForKey:@"Movie"]];
-	if (value = [inParameters objectForKey:@"Time"])
+	if ((value = [inParameters objectForKey:@"Time"]))
 		[self setTime:[value floatValue]];
 	[mURL release];
 	mURL = [[inParameters objectForKey:@"URL"] retain];
@@ -360,25 +364,25 @@
 	NSEnumerator *enumerator = [[self snapGridParameterKeys] objectEnumerator];
 	NSString *key;
 	while (key = [enumerator nextObject])
-		if (value = [inParameters objectForKey:key])
+		if ((value = [inParameters objectForKey:key]))
 			[self setValue:value forKey:key];
 
 	if (inLoading) {
-		if (value = [inParameters objectForKey:@"SelectedTool"])
+		if ((value = [inParameters objectForKey:@"SelectedTool"]))
 			[self setSelectedTool:[value intValue]];
-		if (value = [inParameters objectForKey:@"ImageContent"])
+		if ((value = [inParameters objectForKey:@"ImageContent"]))
 			[self setImageContent:[value intValue]];
-		if (value = [inParameters objectForKey:@"SymbolDetect"])
+		if ((value = [inParameters objectForKey:@"SymbolDetect"]))
 			[self setSymbolDetect:[value intValue]];
-		if (value = [inParameters objectForKey:@"HideFrame"])
+		if ((value = [inParameters objectForKey:@"HideFrame"]))
 			[self setHideFrame:[value boolValue]];
-		if (value = [inParameters objectForKey:@"TimeStep"])
+		if ((value = [inParameters objectForKey:@"TimeStep"]))
 			[self setTimeStep:[value floatValue]];
-		if (value = [inParameters objectForKey:@"DisplayTimeFrameOnly"])
+		if ((value = [inParameters objectForKey:@"DisplayTimeFrameOnly"]))
 			[self setDisplayTimeFrameOnly:[value boolValue]];
-		if (value = [inParameters objectForKey:@"AutoStepForward"])
+		if ((value = [inParameters objectForKey:@"AutoStepForward"]))
 			[self setAutoStepForward:[value boolValue]];
-		if (value = [inParameters objectForKey:@"Guide"]) {
+		if ((value = [inParameters objectForKey:@"Guide"])) {
 			[self willChangeValueForKey:@"guide"];
 			[mGuide release];
 			mGuide = [[NSUnarchiver unarchiveObjectWithData:value] retain];
@@ -929,7 +933,7 @@ static float sTMin, sTMax;
 			int marker = [serie marker];
 			float markerSize = [serie markerSize];
 				
-			if ([serie connected] || [serie definesArea] && [serie areaFill] > 0) {
+			if ([serie connected] || ([serie definesArea] && [serie areaFill] > 0)) {
 				NSBezierPath *polygon = [NSBezierPath bezierPath];
 				NSEnumerator *pointEnumerator = [[serie points] objectEnumerator];
 				GCPoint *point;
@@ -1059,7 +1063,7 @@ static float sTMin, sTMax;
 	NSRect updateRect = [zoomTransform transformRect:inRect];
 	[self drawContentInRect:updateRect withZoomFactor:mZoomFactor];
 
-	if (mValidMagnificationLocation && [NSGraphicsContext currentContextDrawingToScreen])
+	if (mValidMagnificationLocation && [NSGraphicsContext currentContextDrawingToScreen]) {
 		if (mSelectedTool == GCMaskBrushTool || mSelectedTool == GCMaskEraseTool || mSelectedTool == GCImageEraseTool) {
 			NSBezierPath *brushPath = mSelectedTool == GCMaskEraseTool ? [NSBezierPath bezierPathWithRect:[self brushRect]]
 				: [NSBezierPath bezierPathWithOvalInRect:[self brushRect]];
@@ -1118,7 +1122,7 @@ static float sTMin, sTMax;
 				}
 			}
 		}
-
+    }
 	[NSGraphicsContext restoreGraphicsState];
 }
 
@@ -1272,8 +1276,10 @@ static BOOL sDontFocus = NO;
 
 -(void)setFocusedPoints:(NSArray *)inPoints
 {
-	[mFocusedPoints release];
-	mFocusedPoints = [inPoints retain];
+    [mFocusedPoints removeAllObjects];
+    if (inPoints) {
+        [mFocusedPoints addObjectsFromArray:inPoints];
+    }
 	[self setSprite:@"FocusedPoints" rect:[self focusBounds]];
 	if (mSelectedTool == GCSelectTool)
 		[[NSCursor arrowCursor] set];
@@ -1425,7 +1431,7 @@ static BOOL sDontFocus = NO;
 	[[shadow shadowColor] set];
 	if ([inPoints count] >= 1) {
 		NSBezierPath *bezierPath = [NSBezierPath bezierPath];
-		BOOL fill;
+		BOOL fill = NO;
 		float r = [self focusRadius] - [shadow shadowBlurRadius];
 		NSEnumerator *enumerator = [inPoints objectEnumerator];
 		GCPoint *point;
@@ -2577,12 +2583,13 @@ static BOOL sDontFocus = NO;
 	
 	NSImage *image = [[[NSImage alloc] initWithContentsOfURL:inURL] autorelease];
 	NSMovie *movie = [[[NSMovie alloc] initWithURL:inURL byReference:YES] autorelease];
-	if (image != nil && movie != nil)
+	if (image != nil && movie != nil) {
 		if ([movie duration] < 0.13)
 			movie = nil;
 		else
 			image = nil;
-			
+    }
+    
 	if (image) {
 		image = [self checkedImage:image];
 		if (inUser) {
@@ -3146,11 +3153,12 @@ static BOOL sDontFocus = NO;
 	[self willChangeValueForKey:@"canStepForward"];
 	[self willChangeValueForKey:@"time"];
 	mTime = MAX([self minTime], MIN([self maxTime], inTime));
-	if (mMovie)
+	if (mMovie) {
 		if (inWait)
 			[self setImage:[mMovie imageAtTimeFromPoster:mTime] adjustIfNeeded:NO];
 		else
 			[self requestMovieImageAtTime:mTime];
+    }
 	[self didChangeValueForKey:@"canStepBack"];
 	[self didChangeValueForKey:@"canStepForward"];
 	[self didChangeValueForKey:@"time"];

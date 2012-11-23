@@ -104,12 +104,13 @@
 			GCGeometryTableColumn *column;
 			while (column = [columnEnumerator nextObject]) {
 				id value = [row valueForKey:[column boundValue]];
-				if (![value isKindOfClass:[NSString class]])
+				if (![value isKindOfClass:[NSString class]]) {
 					if ([[column identifier] isEqual:@"Number"])
 						value = [NSString stringWithFormat:@"%i", [value intValue]];
 					else {
 						value = [formatter stringForFloat:[value floatValue]];                        
                     }
+                }
 				[string appendFormat:@"%@%@", value, [NSString columnSeparator]];
 			}
 			int l = [[NSString columnSeparator] length];

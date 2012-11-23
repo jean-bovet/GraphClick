@@ -50,7 +50,7 @@
 	}
 	
 	BOOL fatal = NO;
-	if (![self validateAutoAdjustment:&fatal])
+	if (![self validateAutoAdjustment:&fatal]) {
 		if (fatal) {
 			NSRunAlertPanel(NSLocalizedString(@"Auto Adjustment Failed Title", @""), NSLocalizedString(@"Auto Adjustment Failed Message", @""), nil, nil, nil);
 			if (outValid)
@@ -74,7 +74,7 @@
 					return YES;
 			}
 		}
-	
+	}
 	return YES;
 }
 
@@ -100,7 +100,7 @@
 
 -(NSString *)abscissaVariable
 {
-	return [NSString stringWithFormat:@"%C", 0x03BB]; // lambda
+	return [NSString stringWithFormat:@"%C", (unichar)0x03BB]; // lambda
 }
 
 -(NSString *)abscissaName
@@ -110,7 +110,7 @@
 
 -(NSString *)ordinateVariable
 {
-	return [NSString stringWithFormat:@"%C", 0x03D5]; // phi
+	return [NSString stringWithFormat:@"%C", (unichar)0x03D5]; // phi
 }
 
 -(NSString *)ordinateName
@@ -271,11 +271,12 @@
 
 -(int)coordinatePromptKind
 {
-	if ([self adjustmentKind] == 0)
+	if ([self adjustmentKind] == 0) {
 		if (mState <= 2)
 			return 1;
 		else if (mState <= 4)
-			return 2;
+			return 2;        
+    }
 	return 0;
 }
 
@@ -357,7 +358,7 @@ static int sMercatorApproximation = 0;
 	float x = inPoint.x;
 	float y = inPoint.y;
 	float lambda = x;
-	float phi; // = atan(sinh(y))
+	float phi = 0; // = atan(sinh(y))
 	switch (sMercatorApproximation) {
 		case 0:
 			phi = atan(sinh(y));

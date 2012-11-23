@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface GCPreferences : NSWindowController {
+@interface GCPreferences : NSWindowController <NSToolbarDelegate> {
 	IBOutlet NSView *mGeneralView;
 	IBOutlet NSView *mNumberView;
 	IBOutlet NSView *mDetectionView;

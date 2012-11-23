@@ -19,9 +19,12 @@
 
 @implementation GCFilterController
 
-+(void)initialize
-{
-	[self setKeys:[NSArray arrayWithObject:@"filterName"] triggerChangeNotificationsForDependentKey:@"filterNameIndex"];
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"filterName"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"filterNameIndex"]];
+    }
+    return keyPaths;
 }
 
 +(void)loadImageUnits

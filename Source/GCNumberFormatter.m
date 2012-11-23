@@ -56,7 +56,7 @@
 		case 2:
 			return @",";
 		default:
-			return [[NSUserDefaults standardUserDefaults] objectForKey:NSDecimalSeparator];
+			return [[NSUserDefaults standardUserDefaults] objectForKey:NSLocaleDecimalSeparator];
 	}
 }
 

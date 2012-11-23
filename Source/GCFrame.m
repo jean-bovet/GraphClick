@@ -21,11 +21,12 @@
 
 @implementation GCFrame
 
-+(void)initialize
-{
-	[self setKeys:[NSArray arrayWithObject:@"customProjection"] triggerChangeNotificationsForDependentKey:@"coordinateSystemType"];
-	[self setKeys:[NSArray arrayWithObject:@"customProjection"] triggerChangeNotificationsForDependentKey:@"customProjectionName"];
-	[self setKeys:[NSArray arrayWithObject:@"customProjection"] triggerChangeNotificationsForDependentKey:@"customProjectionIcon"];
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"customProjection"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"coordinateSystemType", @"customProjectionName", @"customProjectionIcon"]];
+    }
+    return keyPaths;
 }
 
 -(id)initWithCoder:(NSCoder *)inCoder
@@ -900,11 +901,11 @@ enum {
 		[self willChangeValueForKey:@"xMin"];
 		[self willChangeValueForKey:@"xMax"];
 		[self willChangeValueForKey:@"xScale"];
-		if (value = [limits objectForKey:@"xMin"])
+		if ((value = [limits objectForKey:@"xMin"]))
 			mMin.x = [value floatValue];
-		if (value = [limits objectForKey:@"xMax"])
+		if ((value = [limits objectForKey:@"xMax"]))
 			mMax.x = [value floatValue];
-		if (value = [limits objectForKey:@"xScale"])
+		if ((value = [limits objectForKey:@"xScale"]))
 			mXScale = [value intValue];
 		[self didChangeValueForKey:@"xMin"];
 		[self didChangeValueForKey:@"xMax"];
@@ -914,11 +915,11 @@ enum {
 		[self willChangeValueForKey:@"yMin"];
 		[self willChangeValueForKey:@"yMax"];
 		[self willChangeValueForKey:@"yScale"];
-		if (value = [limits objectForKey:@"yMin"])
+		if ((value = [limits objectForKey:@"yMin"]))
 			mMin.y = [value floatValue];
-		if (value = [limits objectForKey:@"yMax"])
+		if ((value = [limits objectForKey:@"yMax"]))
 			mMax.y = [value floatValue];
-		if (value = [limits objectForKey:@"yScale"])
+		if ((value = [limits objectForKey:@"yScale"]))
 			mYScale = [value intValue];
 		[self didChangeValueForKey:@"yMin"];
 		[self didChangeValueForKey:@"yMax"];

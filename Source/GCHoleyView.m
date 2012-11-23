@@ -50,7 +50,7 @@
 	if (view)
 		return [view performDragOperation:inSender];
 	else
-		return nil;
+		return NO;
 }
 
 -(void)drawRect:(NSRect)inRect

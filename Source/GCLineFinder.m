@@ -115,8 +115,8 @@
 		;
 }
 
-static _dx[] = {1, 1, 0, -1, -1, -1, 0, 1};
-static _dy[] = {0, 1, 1, 1, 0, -1, -1, -1};
+static int _dx[] = {1, 1, 0, -1, -1, -1, 0, 1};
+static int _dy[] = {0, 1, 1, 1, 0, -1, -1, -1};
 
 -(void)findDepthMaxima
 {
@@ -133,8 +133,8 @@ static _dy[] = {0, 1, 1, 1, 0, -1, -1, -1};
 					if (steepness < 1.0) {
 						float prev = [self depthAtX:x - dx y:y - dy];
 						float next = [self depthAtX:x + dx y:y + dy];
-						if (depth > prev && (depth > next || depth == next && depth > [self depthAtX:x + 2 * dx y:y + 2 * dy])
-							|| depth == prev && depth > next && depth > [self depthAtX:x - 2 * dx y:y - 2 * dy])
+						if ((depth > prev && (depth > next || (depth == next && depth > [self depthAtX:x + 2 * dx y:y + 2 * dy])))
+							|| (depth == prev && depth > next && depth > [self depthAtX:x - 2 * dx y:y - 2 * dy]))
 							found = YES;
 					}
 				}
@@ -170,9 +170,9 @@ static _dy[] = {0, 1, 1, 1, 0, -1, -1, -1};
 					for (x = 0; *mKeepOn && x < mWidth; x++)
 						if ([self maximumAtX:x y:y]) 
 							for (d0 = 0; d0 < 8; d0 += pass == 0 ? 1 : 2)
-								if (pass == 1 && MAXIMUM_IN_DIR(0) && MAXIMUM_IN_DIR(2) && !MAXIMUM_IN_DIR(5)
-									|| pass == 0 && MAXIMUM_IN_DIR(7) && MAXIMUM_IN_DIR(0) && MAXIMUM_IN_DIR(1)
-												 && !MAXIMUM_IN_DIR(3) && !MAXIMUM_IN_DIR(4) && !MAXIMUM_IN_DIR(5) ) {
+								if ((pass == 1 && MAXIMUM_IN_DIR(0) && MAXIMUM_IN_DIR(2) && !MAXIMUM_IN_DIR(5))
+									|| (pass == 0 && MAXIMUM_IN_DIR(7) && MAXIMUM_IN_DIR(0) && MAXIMUM_IN_DIR(1)
+												 && !MAXIMUM_IN_DIR(3) && !MAXIMUM_IN_DIR(4) && !MAXIMUM_IN_DIR(5)) ) {
 									mDepth[x + y * mWidth] = fabs(mDepth[x + y * mWidth]);
 									keepOn = YES;
 									if (pass > 0)
