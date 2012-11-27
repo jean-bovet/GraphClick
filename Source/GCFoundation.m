@@ -368,7 +368,7 @@
 -(id)reverseTransformedValue:(id)inValue
 {
 	if ([inValue isKindOfClass:[NSString class]]) {
-		NSString *separator = [[NSUserDefaults standardUserDefaults] objectForKey:NSLocaleDecimalSeparator];
+		NSString *separator = [[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator];
 		if (![separator isEqualToString:@"."]) {
 			NSMutableString *string = [[inValue mutableCopy] autorelease];
 			[string replaceOccurrencesOfString:separator withString:@"." options:NSLiteralSearch range:NSMakeRange(0, [string length])];

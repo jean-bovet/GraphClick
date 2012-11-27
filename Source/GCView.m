@@ -112,11 +112,14 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-    if ([key isEqualToString:@"coordinates"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"xCoordinate", @"yCoordinate"]];
+    if ([key isEqualToString:@"xCoordinate"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"coordinates"]];
     }
-    if ([key isEqualToString:@"magicWandProgress"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"magicWandFinalProgress"]];
+    if ([key isEqualToString:@"yCoordinate"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"coordinates"]];
+    }
+    if ([key isEqualToString:@"magicWandFinalProgress"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"magicWandProgress"]];
     }
     return keyPaths;
 }

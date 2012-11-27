@@ -23,8 +23,14 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-    if ([key isEqualToString:@"customProjection"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"coordinateSystemType", @"customProjectionName", @"customProjectionIcon"]];
+    if ([key isEqualToString:@"coordinateSystemType"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"customProjection"]];
+    }
+    if ([key isEqualToString:@"customProjectionName"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"customProjection"]];
+    }
+    if ([key isEqualToString:@"customProjectionIcon"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"customProjection"]];
     }
     return keyPaths;
 }

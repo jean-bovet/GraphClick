@@ -32,8 +32,20 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-    if ([key isEqualToString:@"computedValues"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedPoints", @"length", @"area", @"definesArea", @"lengthTitle"]];
+    if ([key isEqualToString:@"computedPoints"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedValues"]];
+    }
+    if ([key isEqualToString:@"length"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedValues"]];
+    }
+    if ([key isEqualToString:@"area"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedValues"]];
+    }
+    if ([key isEqualToString:@"definesArea"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedValues"]];
+    }
+    if ([key isEqualToString:@"lengthTitle"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"computedValues"]];
     }
     return keyPaths;
 }

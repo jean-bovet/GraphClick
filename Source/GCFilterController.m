@@ -21,8 +21,8 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-    if ([key isEqualToString:@"filterName"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"filterNameIndex"]];
+    if ([key isEqualToString:@"filterNameIndex"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"filterName"]];
     }
     return keyPaths;
 }

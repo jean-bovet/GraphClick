@@ -35,11 +35,11 @@
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-    if ([key isEqualToString:@"dataSetsAsColumns"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"mergeDataSets"]];
+    if ([key isEqualToString:@"mergeDataSets"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"dataSetsAsColumns"]];
     }
-    if ([key isEqualToString:@"multipleDataSets"]) {
-        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"canMergeIntoSingleFile"]];
+    if ([key isEqualToString:@"canMergeIntoSingleFile"]) {
+        keyPaths = [keyPaths setByAddingObjectsFromArray:@[@"multipleDataSets"]];
     }
     return keyPaths;
 }
