@@ -145,7 +145,7 @@
 	mPromptedPositions = [[NSMutableDictionary alloc] initWithCapacity:2];
 	mPromptedOriginalCoordinates = [[NSMutableDictionary alloc] initWithCapacity:2];
 	mSnapGridNumber[0] = mSnapGridNumber[1] = 10;
-
+    
 	int i;
 	for (i = 0; i < 4; i++)
 		mLastFrameLimit[i] = sqrt(-1.0);
@@ -1281,6 +1281,9 @@ static BOOL sDontFocus = NO;
 {
     [mFocusedPoints removeAllObjects];
     if (inPoints) {
+        if (nil == mFocusedPoints) {
+            mFocusedPoints = [[NSMutableArray alloc] init];
+        }
         [mFocusedPoints addObjectsFromArray:inPoints];
     }
 	[self setSprite:@"FocusedPoints" rect:[self focusBounds]];
