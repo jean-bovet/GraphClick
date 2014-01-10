@@ -1280,7 +1280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
+				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1326,6 +1326,7 @@
 		A7614ADB08B9273E0041B1A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -1347,6 +1348,7 @@
 		A7614ADC08B9273E0041B1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1368,7 +1370,7 @@
 		A763336408B8E5900008D548 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
+				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1405,7 +1407,7 @@
 		A763336508B8E5900008D548 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
+				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1443,7 +1445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jean Bovet";
+				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
