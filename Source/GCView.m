@@ -2336,7 +2336,7 @@ static BOOL sDontFocus = NO;
 	id clipView = self;
 	while (![clipView isKindOfClass:[NSClipView class]])
 		if ((clipView = [clipView superview]) == nil)
-			return;
+			return 0;
 	NSSize size = [clipView visibleRect].size;
 	return MIN(size.width / mBounds.size.width, size.height / mBounds.size.height);
 }

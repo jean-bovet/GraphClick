@@ -8,7 +8,7 @@
 
 #import "GCFoundation.h"
 
-#import <QuickTime/QuickTime.h>
+//#import <QuickTime/QuickTime.h>
 #import "GCNumberFormatter.h"
 
 #define GCDefaultsValueDidChangeNotification @"GCDefaultsValueDidChangeNotification"
@@ -492,6 +492,7 @@
 
 @end
 
+/*
 @implementation NSMovie (GCFoundation)
 
 -(float)duration
@@ -542,6 +543,7 @@
 }
 
 @end
+*/
 
 @implementation NSBezierPath (RoundRect)
 

@@ -52,8 +52,6 @@
 		A74092C608C3653E004DE9EF /* AreaInfoToolbarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A74092C508C3653E004DE9EF /* AreaInfoToolbarImage.png */; };
 		A740933408C37DEF004DE9EF /* GCAdvancedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A740933208C37DEF004DE9EF /* GCAdvancedView.m */; };
 		A740F731076C90B400B7D5A0 /* crosshair.gif in Resources */ = {isa = PBXBuildFile; fileRef = A740F730076C90B400B7D5A0 /* crosshair.gif */; };
-		A7563FD40CD0CE920013D91B /* powell.c in Sources */ = {isa = PBXBuildFile; fileRef = A7563FD00CD0CE920013D91B /* powell.c */; };
-		A7563FD60CD0CE920013D91B /* nrutil.m in Sources */ = {isa = PBXBuildFile; fileRef = A7563FD20CD0CE920013D91B /* nrutil.m */; };
 		A75645450CD11AFC0013D91B /* GCMapAdjustmentWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = A75645430CD11AFC0013D91B /* GCMapAdjustmentWizard.m */; };
 		A75645FE0CD13BFD0013D91B /* GCPointPasteDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A75645FC0CD13BFD0013D91B /* GCPointPasteDialog.m */; };
 		A75646220CD13D970013D91B /* GCPointPasteDialog.nib in Resources */ = {isa = PBXBuildFile; fileRef = A75646200CD13D970013D91B /* GCPointPasteDialog.nib */; };
@@ -72,7 +70,7 @@
 		A76334FE08B8EC210008D548 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334FD08B8EC210008D548 /* CoreFoundation.framework */; };
 		A763350008B8EC300008D548 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334FF08B8EC300008D548 /* ApplicationServices.framework */; };
 		A76335A608B8EC6E0008D548 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76335A508B8EC6E0008D548 /* Foundation.framework */; };
-		A76335D508B8ED260008D548 /* ThresholdUnit.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = A763336008B8E58F0008D548 /* ThresholdUnit.plugin */; };
+		A76335D508B8ED260008D548 /* ThresholdUnit.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = A763336008B8E58F0008D548 /* ThresholdUnit.plugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A76B5D5C0792979700F1B429 /* GCHoleyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B5D5A0792979700F1B429 /* GCHoleyView.m */; };
 		A76C0155085132B300648BEA /* GCDeformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C0153085132B300648BEA /* GCDeformation.m */; };
 		A76C0351085132B300648BEA /* GCMask.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C034F085132B300648BEA /* GCMask.m */; };
@@ -120,6 +118,7 @@
 		A7A3FC22075FAE4100C6CE14 /* GCPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A3FC20075FAE4100C6CE14 /* GCPoint.m */; };
 		A7A3FD1E075FB64200C6CE14 /* GCView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A3FD1C075FB64200C6CE14 /* GCView.m */; };
 		A7A3FFAC076059D300C6CE14 /* GCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A3FFAA076059D300C6CE14 /* GCFrame.m */; };
+		A7ACC71120BD00F600B0253C /* GCMinimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */; };
 		A7ACE33D079B217B00200ED0 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ACE33C079B217B00200ED0 /* QuickTime.framework */; };
 		A7ACE52F079B2A1900200ED0 /* MC_End_Enabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE521079B2A1900200ED0 /* MC_End_Enabled.tiff */; };
 		A7ACE530079B2A1900200ED0 /* MC_End_Hi.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE522079B2A1900200ED0 /* MC_End_Hi.tiff */; };
@@ -136,9 +135,6 @@
 		A7BC374F0CD22E0C008CC6A8 /* Mercator.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BC374E0CD22E0C008CC6A8 /* Mercator.png */; };
 		A7BC37A90CD23211008CC6A8 /* MercatorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BC37A80CD23211008CC6A8 /* MercatorIcon.png */; };
 		A7BC37E60CD23460008CC6A8 /* GCGenericMapProjectionWizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7BC37E40CD23460008CC6A8 /* GCGenericMapProjectionWizard.nib */; };
-		A7BC39440CD28E71008CC6A8 /* mrqmin.c in Sources */ = {isa = PBXBuildFile; fileRef = A7BC39420CD28E71008CC6A8 /* mrqmin.c */; };
-		A7BC394C0CD28EB1008CC6A8 /* matmath.c in Sources */ = {isa = PBXBuildFile; fileRef = A7BC394A0CD28EB1008CC6A8 /* matmath.c */; };
-		A7BC3A110CD3C742008CC6A8 /* GCMinimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */; };
 		A7D0A52D07ECE5B6007ABB88 /* GCPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0A52B07ECE5B6007ABB88 /* GCPreferences.m */; };
 		A7D0A53407ECE5FD007ABB88 /* GCPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0A53207ECE5FD007ABB88 /* GCPreferences.nib */; };
 		A7D0A5D207ECF00C007ABB88 /* UpdatePreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7D0A5D107ECF00C007ABB88 /* UpdatePreferences.tiff */; };
@@ -264,10 +260,6 @@
 		A740933208C37DEF004DE9EF /* GCAdvancedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAdvancedView.m; sourceTree = "<group>"; };
 		A740F730076C90B400B7D5A0 /* crosshair.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crosshair.gif; sourceTree = "<group>"; };
 		A748272D08B76C5700777149 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		A7563FCF0CD0CE920013D91B /* powell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = powell.h; sourceTree = "<group>"; };
-		A7563FD00CD0CE920013D91B /* powell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = powell.c; sourceTree = "<group>"; };
-		A7563FD10CD0CE920013D91B /* nrutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nrutil.h; sourceTree = "<group>"; };
-		A7563FD20CD0CE920013D91B /* nrutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nrutil.m; sourceTree = "<group>"; };
 		A75645420CD11AFC0013D91B /* GCMapAdjustmentWizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMapAdjustmentWizard.h; sourceTree = "<group>"; };
 		A75645430CD11AFC0013D91B /* GCMapAdjustmentWizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMapAdjustmentWizard.m; sourceTree = "<group>"; };
 		A75645FB0CD13BFD0013D91B /* GCPointPasteDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPointPasteDialog.h; sourceTree = "<group>"; };
@@ -393,10 +385,6 @@
 		A7BC374E0CD22E0C008CC6A8 /* Mercator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mercator.png; sourceTree = "<group>"; };
 		A7BC37A80CD23211008CC6A8 /* MercatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MercatorIcon.png; sourceTree = "<group>"; };
 		A7BC37E50CD23460008CC6A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCGenericMapProjectionWizard.nib; sourceTree = "<group>"; };
-		A7BC39410CD28E71008CC6A8 /* mrqmin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrqmin.h; sourceTree = "<group>"; };
-		A7BC39420CD28E71008CC6A8 /* mrqmin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mrqmin.c; sourceTree = "<group>"; };
-		A7BC39490CD28EB1008CC6A8 /* matmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmath.h; sourceTree = "<group>"; };
-		A7BC394A0CD28EB1008CC6A8 /* matmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matmath.c; sourceTree = "<group>"; };
 		A7BC3A0E0CD3C742008CC6A8 /* GCMinimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMinimizer.h; sourceTree = "<group>"; };
 		A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMinimizer.m; sourceTree = "<group>"; };
 		A7D0A52A07ECE5B6007ABB88 /* GCPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPreferences.h; sourceTree = "<group>"; };
@@ -526,7 +514,8 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF750370BD2300C91783 /* GraphClick_Prefix.pch */,
-				A7563FD90CD0CE940013D91B /* Numerical Recipes */,
+				A7BC3A0E0CD3C742008CC6A8 /* GCMinimizer.h */,
+				A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */,
 				2A37F4B0FDCFA73011CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -570,23 +559,6 @@
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A7563FD90CD0CE940013D91B /* Numerical Recipes */ = {
-			isa = PBXGroup;
-			children = (
-				A7563FCF0CD0CE920013D91B /* powell.h */,
-				A7563FD00CD0CE920013D91B /* powell.c */,
-				A7BC39410CD28E71008CC6A8 /* mrqmin.h */,
-				A7BC39420CD28E71008CC6A8 /* mrqmin.c */,
-				A7BC39490CD28EB1008CC6A8 /* matmath.h */,
-				A7BC394A0CD28EB1008CC6A8 /* matmath.c */,
-				A7563FD10CD0CE920013D91B /* nrutil.h */,
-				A7563FD20CD0CE920013D91B /* nrutil.m */,
-				A7BC3A0E0CD3C742008CC6A8 /* GCMinimizer.h */,
-				A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */,
-			);
-			name = "Numerical Recipes";
 			sourceTree = "<group>";
 		};
 		A763336908B8E5970008D548 /* ThresholdUnit */ = {
@@ -820,8 +792,17 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Arizona Software";
+				TargetAttributes = {
+					8D15AC270486D014006FF6A4 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = A730E7E6085DBAB70015E249 /* Build configuration list for PBXProject "GraphClick" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -984,6 +965,7 @@
 			files = (
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				A7A3FC1E075FAE2F00C6CE14 /* GCSerie.m in Sources */,
+				A7ACC71120BD00F600B0253C /* GCMinimizer.m in Sources */,
 				A7A3FC22075FAE4100C6CE14 /* GCPoint.m in Sources */,
 				A7A3FD1E075FB64200C6CE14 /* GCView.m in Sources */,
 				A7A3FFAC076059D300C6CE14 /* GCFrame.m in Sources */,
@@ -1017,13 +999,8 @@
 				A75C929A099211CD005A60F6 /* GCSnapGridController.m in Sources */,
 				A79025F10CCFDEAA00DAB5DB /* GCAdjustmentWizard.m in Sources */,
 				A790278D0CCFEB6900DAB5DB /* GCCustomProjection.m in Sources */,
-				A7563FD40CD0CE920013D91B /* powell.c in Sources */,
-				A7563FD60CD0CE920013D91B /* nrutil.m in Sources */,
 				A75645450CD11AFC0013D91B /* GCMapAdjustmentWizard.m in Sources */,
 				A75645FE0CD13BFD0013D91B /* GCPointPasteDialog.m in Sources */,
-				A7BC39440CD28E71008CC6A8 /* mrqmin.c in Sources */,
-				A7BC394C0CD28EB1008CC6A8 /* matmath.c in Sources */,
-				A7BC3A110CD3C742008CC6A8 /* GCMinimizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,7 +1256,6 @@
 		A730E7E4085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1293,7 +1269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -1301,10 +1277,11 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.graphclick";
 				PRODUCT_NAME = GraphClick;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.8;
-				SKIP_INSTALL = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1313,19 +1290,44 @@
 		A730E7E8085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Jean Bovet";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = "";
-				VALID_ARCHS = i386;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		A7614ADB08B9273E0041B1A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -1348,6 +1350,7 @@
 		A7614ADC08B9273E0041B1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1370,6 +1373,7 @@
 		A763336408B8E5900008D548 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1391,6 +1395,7 @@
 					AppKit,
 				);
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.ThresholdUnit";
 				PRODUCT_NAME = ThresholdUnit;
 				PROVISIONING_PROFILE = "";
 				SECTORDER_FLAGS = "";
@@ -1407,6 +1412,7 @@
 		A763336508B8E5900008D548 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1428,6 +1434,7 @@
 					AppKit,
 				);
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.ThresholdUnit";
 				PRODUCT_NAME = ThresholdUnit;
 				PROVISIONING_PROFILE = "";
 				SECTORDER_FLAGS = "";
@@ -1444,7 +1451,6 @@
 		A776CED808A2915E00C3D479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1454,11 +1460,13 @@
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARLicenseAgreement/universal/build/Deployment",
 					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARRegister/universal/build/Deployment",
 				);
+				GCC_FAST_OBJC_DISPATCH = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -1466,10 +1474,12 @@
 					"-weak_framework",
 					Quartz,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.graphclick";
 				PRODUCT_NAME = GraphClick;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.8;
-				SKIP_INSTALL = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1478,13 +1488,40 @@
 		A776CED908A2915E00C3D479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Jean Bovet";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = "";
-				VALID_ARCHS = i386;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};

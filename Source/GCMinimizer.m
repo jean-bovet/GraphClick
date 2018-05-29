@@ -8,7 +8,12 @@
 
 #import "GCMinimizer.h"
 
-#include "powell.h"
+// TODO: redefine these functions
+#define vector(a, b) 0
+#define matrix(a, b, c, d) 0
+#define powell(a, b, c, d, e, f, g)
+#define free_vector(a, b, c)
+#define free_matrix(a, b, c, d, e)
 
 @implementation GCMinimizer
 
