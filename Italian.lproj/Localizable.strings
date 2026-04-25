@@ -89,9 +89,6 @@ l'immagine del tuo grafico";
 "Unregistered Multiple Data Sets Alert Title" = "Versione non registrata";
 "Unregistered Multiple Data Sets Alert Message" = "Il numero di insiemi di dati che possono essere esportati simultaneamente con una copia non registrata di GraphClick è limitato a 2.";
 
-"Bug Report URL" = "http://www.arizona-software.ch/applications/graphclick/en/bugreport.php";
-"Online Tour URL" = "http://www.arizona-software.ch/graphclick/tour/";
-"Lost Serial URL" = "http://store.esellerate.net/support";
 "Homepage URL" = "http://www.arizona-software.ch/";
 "Register Button" = "Registra…";
 

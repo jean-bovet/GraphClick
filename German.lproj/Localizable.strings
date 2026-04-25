@@ -88,9 +88,6 @@
 "Unregistered Multiple Data Sets Alert Title" = "Unregistrierte Kopie";
 "Unregistered Multiple Data Sets Alert Message" = "Die Anzahl der Datensätze, die mit einer unregistrierten Kopie von GraphClick gleichzeitig exportiert werden können, ist limitiert auf 2.";
 
-"Bug Report URL" = "http://www.arizona-software.ch/graphclick/bugreport/";
-"Online Tour URL" = "http://www.arizona-software.ch/graphclick/tour/";
-"Lost Serial URL" = "http://store.esellerate.net/support";
 "Homepage URL" = "http://www.arizona-software.ch/de";
 "Register Button" = "Registrieren…";
 

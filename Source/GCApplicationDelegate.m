@@ -104,90 +104,22 @@
 	[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:GCDisplayedPaletteView];
 }
 
-BOOL sDisplayLicenseAgreement = NO;
-
 -(BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app
 {
 	return YES;
 }
 
--(NSDocument *)openUntitledDocumentAndDisplay:(BOOL)displayDocument error:(NSError **)outError
-{
-	if (sDisplayLicenseAgreement)
-		return nil;
-	return [super openUntitledDocumentAndDisplay:displayDocument error:outError];
-}
-
 -(void)applicationDidFinishLaunching:(NSNotification *)inNotification
 {
-//	if (sDisplayLicenseAgreement) {
-//		ARLicenseAgreementManager *manager = [ARLicenseAgreementManager sharedManager];
-//		if (![manager userAcceptsLicenseAgreement])
-//			exit(0);
-//		sDisplayLicenseAgreement = NO;
-//	    [[ARAboutDialog sharedAboutDialog] show:nil];
-//		[self openUntitledDocumentOfType:@"GraphClick Document" display:YES];
-//	    [[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:2.0];
-//	}
-	    [[ARAboutDialog sharedAboutDialog] show:nil];
-//		[self openUntitledDocumentOfType:@"GraphClick Document" display:YES];
-	    [[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:2.0];
+	[[ARAboutDialog sharedAboutDialog] show:nil];
+	[[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:2.0];
 }
 
 -(void)awakeFromNib
 {
-//	ARLicenseAgreementManager *manager = [ARLicenseAgreementManager sharedManager];
-	sDisplayLicenseAgreement = NO; //![manager userHasAcceptedLicenseAgreement];
-
-//	ARRegisterManager* registerManager = [ARRegisterManager sharedManager];
-/*	[registerManager addVersionWithID:@"GC"
-			name:@"GraphClick"
-			price:@"US$8"
-			comment:nil
-			latest:YES
-			equivalentToID:nil
-			eSellerID:@"ES9638921356"
-			previewID:nil //@"PC2287029595-4975"
-			eSelleratePrefix:@"GCN0200"
-			expirable:NO
-			arizonaPrefix:@"AGC0200"
-			previousVersionIDs:nil];*/
-//	[registerManager addVersionWithID:@"GC"
-//			name:@"GraphClick"
-//			price:@"US$8"
-//			comment:nil
-//			latest:YES
-//			equivalentToID:nil
-//			eSellerID:@"STR6516190330"
-//			SKUID:@"SKU81770258615"
-//			previewID:nil //@"hewC5jVH"
-//			eSelleratePrefix:@"GCN0200"
-//			expirable:NO
-//			arizonaPrefix:@"AGC0200"
-//			previousVersionIDs:nil];
-//
-//	[registerManager addInvalidBlacklist:@""];
-//	[registerManager addHackedBlacklist:@"FWW4/189J/NX92Z3N.27RY18978.1/-C.Wz MVP.03/36236P5D6PLL0.Z6M77M88K4-BW63Mi XUD/041.98.AZG553.PJ/2H45/1-4874953/Ki ZOR/04171595.-.8HTSS3J1JG96KD30224A/Li FWW4/189-WQ125X.E86E-934.4O5FK3D7Kz UHJ0606487K..57-4./9R-ZU-/DLB.-6A52Qv YPZ413/4W3OU35SAH5.L3-5H6G4./DCN7Iz MGU.03/7166FQFS0ZKJL7Q.749MHSX3SSUB9Ji"];
-//	
-//	if (!sDisplayLicenseAgreement)
-//	    [[ARAboutDialog sharedAboutDialog] show:nil];
-
-//    ARUpdateManager *updater = [ARUpdateManager sharedManager];
-//	[updater setServerName:@"localhost"];
-//	[updater setServerPath:@"/~bovet/updates/"];
-//	[updater setServerName:@"www.arizona-software.ch"];
-//	[updater setServerPath:@"/updates/"];
-//    [updater setLocalPath:[[[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist" inDirectory:@"Updates"] stringByDeletingLastPathComponent]];
-//    [updater setName:@"graphclick"];
-//	[updater setUpdateBlacklist:YES];
-//	[updater insertPreferencesIntoView:[[GCPreferences sharedWindowController] updateView]];
-	
 	[GCInspector loadInspectors];
 	[GCGeometryInfo loadInspector];
 	[GCAreaInfo loadInspector];
-	
-//	if (!sDisplayLicenseAgreement)
-//	    [[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:2.0];
 }
 
 -(void)dealloc
@@ -198,31 +130,6 @@ BOOL sDisplayLicenseAgreement = NO;
 -(void)showAboutBox:(id)inSender
 {
 	[[ARAboutDialog sharedAboutDialog] performSelector:@selector(showAboutWindow) withObject:nil afterDelay:0.0];
-}
-
--(void)checkForUpdates:(id)inSender
-{
-//    [[ARUpdateManager sharedManager] checkForUpdates:inSender];
-}
-
--(void)showLicenseWindow:(id)inSender
-{
-//	[[ARRegisterManager sharedManager] performSelector:@selector(displayLicenseWindow:) withObject:nil afterDelay:0];
-}
-
--(void)reportBug:(id)inSender
-{
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Bug Report URL", @"")]];
-}
-
--(void)onlineTour:(id)inSender
-{
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Online Tour URL", @"")]];
-}
-
--(IBAction)lostSerial:(id)inSender
-{
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Lost Serial URL", @"")]];
 }
 
 -(IBAction)visitHomepage:(id)inSender
