@@ -186,10 +186,11 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 13;
 			files = (
 				A76335D508B8ED260008D548 /* ThresholdUnit.plugin in CopyFiles */,
 			);
+			name = "Copy ThresholdUnit Plug-in";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A7D9BDAC0789C14A0013A643 /* Embed Frameworks */ = {
