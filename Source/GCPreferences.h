@@ -15,9 +15,9 @@
 	IBOutlet NSView *mDetectionView;
 	IBOutlet NSView *mAdvancedView;
 	IBOutlet NSView *mUpdateView;
-	
+
 	NSArray *mPaneViews;
-	NSArray *mPaneImageNames;
+	NSArray *mPaneSymbolNames;
 	NSArray *mPaneLabels;
 }
 

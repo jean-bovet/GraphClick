@@ -84,6 +84,21 @@ outstanding.
 - App sandboxing turned on with a minimal entitlements set.
 - Code signing corrected so the sandboxed build launches cleanly.
 
+### Preferences toolbar (post-3.1)
+- Deployment target bumped to macOS 11.0 (Big Sur) so that SF Symbols
+  are available.
+- Replaced the four hand-drawn preferences-toolbar TIFFs (mismatched
+  sizes and dated visuals) with SF Symbols: `gearshape`,
+  `textformat.123`, `wand.and.rays`, `slider.horizontal.3`. Vector
+  glyphs render uniformly at any scale and adapt to dark mode and
+  accent color automatically.
+- Switched the Preferences window's toolbar style to
+  `NSWindowToolbarStylePreference` for the compact Big Sur+ look.
+- The original `Preferences.tiff` / `NumberPreferences.tif` /
+  `DetectionPreferences.tif` / `AdvancedPreferences.tiff` files are
+  no longer referenced by code but remain in `Images/` and as
+  resources in the bundle for now; can be removed in a follow-up.
+
 ## TODO
 
 ### Deprecated AppKit API (functional, but warned)

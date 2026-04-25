@@ -24,7 +24,7 @@
 		[self loadWindow];
 
 		mPaneViews = [[NSArray alloc] initWithObjects:mGeneralView, mNumberView, mDetectionView, mAdvancedView, nil];
-		mPaneImageNames = [[NSArray alloc] initWithObjects:@"Preferences", @"NumberPreferences", @"DetectionPreferences", @"AdvancedPreferences", nil];
+		mPaneSymbolNames = [[NSArray alloc] initWithObjects:@"gearshape", @"textformat.123", @"wand.and.rays", @"slider.horizontal.3", nil];
 		mPaneLabels = [[NSArray alloc] initWithObjects:
 							NSLocalizedString(@"General Preference Pane Label", @""),
 							NSLocalizedString(@"Number Format Preference Pane Label", @""),
@@ -41,7 +41,7 @@
 -(void)dealloc
 {
 	[mPaneViews release];
-	[mPaneImageNames release];
+	[mPaneSymbolNames release];
 	[mPaneLabels release];
 	[super dealloc];
 }
@@ -96,10 +96,11 @@
     
     [toolbar setAllowsUserCustomization:NO];
     [toolbar setAutosavesConfiguration:NO];
-    [toolbar setDisplayMode:NSToolbarDisplayModeIconAndLabel];
     [toolbar setDelegate:self];
-    
-    [[self window] setToolbar:toolbar];
+
+    NSWindow *window = [self window];
+    [window setToolbar:toolbar];
+    [window setToolbarStyle:NSWindowToolbarStylePreference];
 }
 
 -(NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)inToolbar
@@ -120,13 +121,14 @@
 -(NSToolbarItem *)toolbar:(NSToolbar *)inToolbar itemForItemIdentifier:(NSString *)inItemIdentifier willBeInsertedIntoToolbar:(BOOL)inWillBeInserted
 {
     NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier:inItemIdentifier] autorelease];
-    
+
+	NSInteger index = [mPaneLabels indexOfObject:inItemIdentifier];
 	[toolbarItem setLabel:inItemIdentifier];
-	int index = [mPaneLabels indexOfObject:inItemIdentifier];
-	[toolbarItem setImage:[NSImage imageNamed:[mPaneImageNames objectAtIndex:index]]];
+	[toolbarItem setImage:[NSImage imageWithSystemSymbolName:[mPaneSymbolNames objectAtIndex:index]
+	                                accessibilityDescription:inItemIdentifier]];
 	[toolbarItem setTarget:self];
 	[toolbarItem setAction:@selector(selectPreferences:)];
-	
+
 	return toolbarItem;
 }
 
