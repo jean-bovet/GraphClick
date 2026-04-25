@@ -111,12 +111,11 @@ BOOL sDisplayLicenseAgreement = NO;
 	return YES;
 }
 
--(id)openUntitledDocumentOfType:(NSString *)inType display:(BOOL)inDisplay
+-(NSDocument *)openUntitledDocumentAndDisplay:(BOOL)displayDocument error:(NSError **)outError
 {
 	if (sDisplayLicenseAgreement)
-		return [NSNull null];
-	else
-		return [super openUntitledDocumentOfType:inType display:inDisplay];
+		return nil;
+	return [super openUntitledDocumentAndDisplay:displayDocument error:outError];
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification *)inNotification

@@ -44,6 +44,11 @@
     return keyPaths;
 }
 
++(BOOL)autosavesInPlace
+{
+	return YES;
+}
+
 -(id)init
 {
     if (self = [super init]) {
