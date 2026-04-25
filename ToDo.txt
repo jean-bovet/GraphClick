@@ -17,7 +17,7 @@ Future:
 
 Suggestions:
 - Auto-centrage
-- Graphs ternaires (cf Mail de Claude Dion)
+- Graphs ternaires (per user request)
 - Transformations d'Helmert
 - ROOT files
 - Pipette pour couleur de fond
