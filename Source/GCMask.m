@@ -14,10 +14,10 @@
 -(id)initWithCoder:(NSCoder *)inCoder
 {
 	if (self = [super init]) {
-		[inCoder decodeValueOfObjCType:@encode(NSRect) at:&mBounds];
+		mBounds = [[inCoder decodeObject] rectValue];
 		mImage = [[inCoder decodeObject] retain];
 		if ([inCoder versionForClassName:@"GCMask"] >= 1)
-			[inCoder decodeValueOfObjCType:@encode(NSRect) at:&mContentBounds];
+			mContentBounds = [[inCoder decodeObject] rectValue];
 		else
 			mContentBounds = mBounds;
 	}
@@ -27,10 +27,10 @@
 -(void)encodeWithCoder:(NSCoder *)inCoder
 {
 	[GCMask setVersion:1];
-	[inCoder encodeValueOfObjCType:@encode(NSRect) at:&mBounds];
+	[inCoder encodeObject:[NSValue valueWithRect:mBounds]];
 	[inCoder encodeObject:mImage];
 	if ([GCMask version] >= 1)
-		[inCoder encodeValueOfObjCType:@encode(NSRect) at:&mContentBounds];
+		[inCoder encodeObject:[NSValue valueWithRect:mContentBounds]];
 }
 
 -(id)initWithBounds:(NSRect)inBounds
@@ -144,7 +144,7 @@
 
 +(NSColor *)color
 {
-	NSColor *color = [NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"GCMaskColor"]];
+	NSColor *color = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"GCMaskColor"]];
 	if (!color)
 		color = [NSColor blackColor];
 	return color;

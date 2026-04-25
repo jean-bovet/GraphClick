@@ -63,12 +63,12 @@
 	[initialValues setBool:YES forKey:GCMagicWandLineFinderExtremity];
 	[initialValues setBool:NO forKey:GCMagicWandLineFinderRightToLeft];
 
-	[initialValues setObject:[NSArchiver archivedDataWithRootObject:[NSColor greenColor]] forKey:GCFrameColor];
+	[initialValues setObject:[NSKeyedArchiver archivedDataWithRootObject:[NSColor greenColor]] forKey:GCFrameColor];
 	[initialValues setBool:YES forKey:GCFrameDotted];
 	[initialValues setFloat:0.1 forKey:GCFrameBackgroundOpacity];
 	[initialValues setBool:YES forKey:GCFrameLabelled];
 
-	[initialValues setObject:[NSArchiver archivedDataWithRootObject:[NSColor blueColor]] forKey:GCMaskColor];
+	[initialValues setObject:[NSKeyedArchiver archivedDataWithRootObject:[NSColor blueColor]] forKey:GCMaskColor];
 	[initialValues setFloat:0.3 forKey:GCMaskOpacity];
 	[initialValues setFloat:10 forKey:GCMaskBrushSize];
 	
@@ -105,6 +105,11 @@
 }
 
 BOOL sDisplayLicenseAgreement = NO;
+
+-(BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app
+{
+	return YES;
+}
 
 -(id)openUntitledDocumentOfType:(NSString *)inType display:(BOOL)inDisplay
 {

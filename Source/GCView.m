@@ -333,7 +333,7 @@
 	[parameters setInt:[self selectedTool] forKey:@"SelectedTool"];
 	[parameters setInt:[self symbolDetect] forKey:@"SymbolDetect"];
 	[parameters setBool:[self hideFrame] forKey:@"HideFrame"];
-	[parameters setObject:[NSArchiver archivedDataWithRootObject:mGuide] forKey:@"Guide"];
+	[parameters setObject:[NSKeyedArchiver archivedDataWithRootObject:mGuide] forKey:@"Guide"];
 	
 	NSEnumerator *enumerator = [[self snapGridParameterKeys] objectEnumerator];
 	NSString *key;
@@ -388,7 +388,7 @@
 		if ((value = [inParameters objectForKey:@"Guide"])) {
 			[self willChangeValueForKey:@"guide"];
 			[mGuide release];
-			mGuide = [[NSUnarchiver unarchiveObjectWithData:value] retain];
+			mGuide = [[NSKeyedUnarchiver unarchiveObjectWithData:value] retain];
 			[self didChangeValueForKey:@"guide"];
 		}
 	}
@@ -576,7 +576,7 @@
 -(NSColor *)frameColor
 {
 	if (!mFrameColor)
-		mFrameColor = [[NSUnarchiver unarchiveObjectWithData:[[[NSUserDefaultsController sharedUserDefaultsController] values]
+		mFrameColor = [[NSKeyedUnarchiver unarchiveObjectWithData:[[[NSUserDefaultsController sharedUserDefaultsController] values]
 							valueForKey:@"GCFrameColor"]] retain];
 	return mFrameColor;
 }
@@ -2509,7 +2509,7 @@ static BOOL sDontFocus = NO;
 {
 	[mGuidePreview setGuide:mGuide];
 	[NSApp beginSheet:mGuideSettingsWindow modalForWindow:[self window] modalDelegate:self
-				didEndSelector:@selector(guideSheetDidEnd:returnCode:contextInfo:) contextInfo:[[NSArchiver archivedDataWithRootObject:mGuide] retain]];
+				didEndSelector:@selector(guideSheetDidEnd:returnCode:contextInfo:) contextInfo:[[NSKeyedArchiver archivedDataWithRootObject:mGuide] retain]];
 }
 
 -(id)guide
@@ -2532,7 +2532,7 @@ static BOOL sDontFocus = NO;
 	if (inReturnCode == NSCancelButton) {
 		[self willChangeValueForKey:@"guide"];
 		[mGuide release];
-		mGuide = [[NSUnarchiver unarchiveObjectWithData:inGuideData] retain];
+		mGuide = [[NSKeyedUnarchiver unarchiveObjectWithData:inGuideData] retain];
 		[self didChangeValueForKey:@"guide"];
 	}
 	[inGuideData release];
@@ -2588,13 +2588,7 @@ static BOOL sDontFocus = NO;
 	BOOL ok = NO;
 	
 	NSImage *image = [[[NSImage alloc] initWithContentsOfURL:inURL] autorelease];
-	NSMovie *movie = [[[NSMovie alloc] initWithURL:inURL byReference:YES] autorelease];
-	if (image != nil && movie != nil) {
-		if ([movie duration] < 0.13)
-			movie = nil;
-		else
-			image = nil;
-    }
+	NSMovie *movie = nil;
     
 	if (image) {
 		image = [self checkedImage:image];
@@ -2862,12 +2856,12 @@ static BOOL sDontFocus = NO;
 
 -(NSData *)imageData
 {
-	return [NSArchiver archivedDataWithRootObject:mImage];
+	return [NSKeyedArchiver archivedDataWithRootObject:mImage];
 }
 
 -(void)setImageData:(NSData *)inData
 {
-	NSImage *image = [NSUnarchiver unarchiveObjectWithData:inData];
+	NSImage *image = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
 	if (image) {
 		[mImage release];
 		mImage = [image retain];
@@ -3557,8 +3551,8 @@ static float sMovieImageTime;
 		[coordinates addObject:[NSValue valueWithPoint:[point coordinatePoint]]];
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	[pasteboard declareTypes:[NSArray arrayWithObjects:GCPointsPboardType, GCCoordinatesPboardType, nil] owner:self];
-	[pasteboard setData:[NSArchiver archivedDataWithRootObject:points] forType:GCPointsPboardType];
-	[pasteboard setData:[NSArchiver archivedDataWithRootObject:coordinates] forType:GCCoordinatesPboardType];
+	[pasteboard setData:[NSKeyedArchiver archivedDataWithRootObject:points] forType:GCPointsPboardType];
+	[pasteboard setData:[NSKeyedArchiver archivedDataWithRootObject:coordinates] forType:GCCoordinatesPboardType];
 }
 
 -(BOOL)canPastePoints
@@ -3568,8 +3562,8 @@ static float sMovieImageTime;
 
 -(void)pastePoints:(id)inSender
 {
-	NSArray *points = [NSUnarchiver unarchiveObjectWithData:[[NSPasteboard generalPasteboard] dataForType:GCPointsPboardType]];
-	NSArray *coordinates = [NSUnarchiver unarchiveObjectWithData:[[NSPasteboard generalPasteboard] dataForType:GCCoordinatesPboardType]];
+	NSArray *points = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSPasteboard generalPasteboard] dataForType:GCPointsPboardType]];
+	NSArray *coordinates = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSPasteboard generalPasteboard] dataForType:GCCoordinatesPboardType]];
 	BOOL sameCoordinates = YES;
 	[self preparePointInsertion];
 	NSEnumerator *enumerator = [points objectEnumerator];

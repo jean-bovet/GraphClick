@@ -186,7 +186,7 @@
 	[point release];
 }
 
-int compare(id ptA, id ptB, void *info)
+NSInteger compare(id ptA, id ptB, void *info)
 {
 	float a = 0, b = 0;
 	switch (((int *)info)[0]) {

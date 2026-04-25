@@ -19,7 +19,7 @@ static float sTime = 0.0;
 {
 	if (self = [self init]) {
 		mSerie = [inCoder decodeObject];
-		[inCoder decodeValueOfObjCType:@encode(NSPoint) at:&mPoint];
+		mPoint = [[inCoder decodeObject] pointValue];
 		if ([inCoder versionForClassName:@"GCPoint"] >= 1) {
 			[inCoder decodeValueOfObjCType:@encode(float) at:&mXMinError];
 			[inCoder decodeValueOfObjCType:@encode(float) at:&mXMaxError];
@@ -38,7 +38,7 @@ static float sTime = 0.0;
 {
 	[GCPoint setVersion:3];
 	[inCoder encodeConditionalObject:mSerie];
-	[inCoder encodeValueOfObjCType:@encode(NSPoint) at:&mPoint];
+	[inCoder encodeObject:[NSValue valueWithPoint:mPoint]];
 	if ([GCPoint version] >= 1) {
 		[inCoder encodeValueOfObjCType:@encode(float) at:&mXMinError];
 		[inCoder encodeValueOfObjCType:@encode(float) at:&mXMaxError];

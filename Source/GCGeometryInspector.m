@@ -131,7 +131,7 @@
 {
 	id position = [[NSUserDefaults standardUserDefaults] objectForKey:[self positionKey]];
 	if (position)
-		[(GCGeometryInspector *)[self sharedInspector] setPosition:[NSUnarchiver unarchiveObjectWithData:position]];
+		[(GCGeometryInspector *)[self sharedInspector] setPosition:[NSKeyedUnarchiver unarchiveObjectWithData:position]];
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:[self visibleKey]])
 		[self show];
 }
@@ -189,7 +189,7 @@
 -(void)saveInspectorState:(id)inSender
 {
 	[[NSUserDefaults standardUserDefaults] setBool:[[self class] isVisible] forKey:[[self class] visibleKey]];
-	[[NSUserDefaults standardUserDefaults] setObject:[NSArchiver archivedDataWithRootObject:[self position]] forKey:[[self class] positionKey]];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:[self position]] forKey:[[self class] positionKey]];
 }
 
 @end

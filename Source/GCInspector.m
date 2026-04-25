@@ -50,7 +50,7 @@
 		if (!position) {
 			NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:GCInspectorPosition];
 			if (data)
-				position = [NSUnarchiver unarchiveObjectWithData:data];
+				position = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 		}
 		if (position)
 			[[self window] setFrameTopLeftPoint:[position pointValue]];
@@ -120,14 +120,14 @@
 			[state setObject:[NSValue valueWithPoint:[inspector origin]] forKey:GCInspectorPosition];
 			[states addObject:state];
 		}
-	[[NSUserDefaults standardUserDefaults] setObject:[NSArchiver archivedDataWithRootObject:states] forKey:GCInspectorStates];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:states] forKey:GCInspectorStates];
 }
 
 -(void)windowWillClose:(NSNotification *)inNotification
 {
 	NSMutableArray *inspectors = [[self class] inspectors];
 	if ([inspectors count] == 1)
-		[[NSUserDefaults standardUserDefaults] setObject:[NSArchiver archivedDataWithRootObject:[NSValue valueWithPoint:[self origin]]] forKey:GCInspectorPosition];
+		[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:[NSValue valueWithPoint:[self origin]]] forKey:GCInspectorPosition];
 	[inspectors removeObject:self];
 }
 
@@ -159,7 +159,7 @@
 {
 	NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:GCInspectorStates];
 	if (data) {
-		NSArray *states = [NSUnarchiver unarchiveObjectWithData:data];
+		NSArray *states = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 		NSEnumerator *enumerator = [states objectEnumerator];
 		id state;
 		while (state = [enumerator nextObject]) {

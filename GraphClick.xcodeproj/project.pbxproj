@@ -119,7 +119,6 @@
 		A7A3FD1E075FB64200C6CE14 /* GCView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A3FD1C075FB64200C6CE14 /* GCView.m */; };
 		A7A3FFAC076059D300C6CE14 /* GCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A3FFAA076059D300C6CE14 /* GCFrame.m */; };
 		A7ACC71120BD00F600B0253C /* GCMinimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC3A0F0CD3C742008CC6A8 /* GCMinimizer.m */; };
-		A7ACE33D079B217B00200ED0 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ACE33C079B217B00200ED0 /* QuickTime.framework */; };
 		A7ACE52F079B2A1900200ED0 /* MC_End_Enabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE521079B2A1900200ED0 /* MC_End_Enabled.tiff */; };
 		A7ACE530079B2A1900200ED0 /* MC_End_Hi.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE522079B2A1900200ED0 /* MC_End_Hi.tiff */; };
 		A7ACE532079B2A1900200ED0 /* MC_FF_Enabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE524079B2A1900200ED0 /* MC_FF_Enabled.tiff */; };
@@ -367,7 +366,6 @@
 		A7A3FD1C075FB64200C6CE14 /* GCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCView.m; sourceTree = "<group>"; };
 		A7A3FFA9076059D300C6CE14 /* GCFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFrame.h; sourceTree = "<group>"; };
 		A7A3FFAA076059D300C6CE14 /* GCFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFrame.m; sourceTree = "<group>"; };
-		A7ACE33C079B217B00200ED0 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		A7ACE521079B2A1900200ED0 /* MC_End_Enabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MC_End_Enabled.tiff; sourceTree = "<group>"; };
 		A7ACE522079B2A1900200ED0 /* MC_End_Hi.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MC_End_Hi.tiff; sourceTree = "<group>"; };
 		A7ACE524079B2A1900200ED0 /* MC_FF_Enabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MC_FF_Enabled.tiff; sourceTree = "<group>"; };
@@ -445,7 +443,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
-				A7ACE33D079B217B00200ED0 /* QuickTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
-				A7ACE33C079B217B00200ED0 /* QuickTime.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
 				A7FD1AF7088B04EE009F4204 /* Quartz.framework */,
@@ -1256,7 +1252,6 @@
 		A730E7E4085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1272,7 +1267,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					Quartz,
@@ -1308,7 +1303,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Jean Bovet";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1328,7 +1322,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -1351,7 +1344,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: jean-macbook-pro-retina (VJ6RD6928D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1374,7 +1366,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1413,7 +1404,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1451,7 +1441,6 @@
 		A776CED808A2915E00C3D479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer: Jean Bovet (UWZ5H9NE8R)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1469,7 +1458,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					Quartz,
@@ -1506,7 +1495,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Jean Bovet";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;

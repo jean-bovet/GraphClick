@@ -392,12 +392,12 @@
 		if ((value = [self valueForKey:key]))
 			[dictionary setObject:value forKey:key];
 
-	return [NSArchiver archivedDataWithRootObject:dictionary];
+	return [NSKeyedArchiver archivedDataWithRootObject:dictionary];
 }
 
 -(BOOL)loadDataRepresentation:(NSData *)inData ofType:(NSString *)inType
 {
-	NSDictionary *dictionary = [NSUnarchiver unarchiveObjectWithData:inData];
+	NSDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
 	[self willChangeValueForKey:@"frame"];
 	[mFrame release];
 	mFrame = [[dictionary objectForKey:@"Frame"] retain];
@@ -767,16 +767,18 @@ static GCDocument *sActiveDocument = nil;
 {
 	if ([super respondsToSelector:inSelector])
 		return YES;
-	else
-		return [mView respondsToSelector:inSelector];
+	if (inSelector == @selector(validRequestorForSendType:returnType:))
+		return NO;
+	return [mView respondsToSelector:inSelector];
 }
 
 -(NSMethodSignature *)methodSignatureForSelector:(SEL)inSelector
 {
 	if ([super respondsToSelector:inSelector])
 		return [super methodSignatureForSelector:inSelector];
-	else
-		return [mView methodSignatureForSelector:inSelector];
+	if (inSelector == @selector(validRequestorForSendType:returnType:))
+		return nil;
+	return [mView methodSignatureForSelector:inSelector];
 }
 
 -(void)forwardInvocation:(NSInvocation *)inInvocation
@@ -1023,13 +1025,13 @@ static BOOL sExportingToFile = NO;
 	[dictionary setObject:parameters forKey:@"ViewParameters"];
 	[dictionary setObject:[mSerieController selectionIndexes] forKey:@"SelectedSeries"];
 	[dictionary setObject:[mPointController selectionIndexes] forKey:@"SelectedPoints"];
-	return [NSArchiver archivedDataWithRootObject:dictionary];
+	return [NSKeyedArchiver archivedDataWithRootObject:dictionary];
 }
 
 -(void)setUndoData:(NSData *)inData
 {
 	[self prepareUndo];
-	NSDictionary *dictionary = [NSUnarchiver unarchiveObjectWithData:inData];
+	NSDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
 	[self willChangeValueForKey:@"frame"];
 	[mFrame release];
 	mFrame = [[dictionary objectForKey:@"Frame"] retain];

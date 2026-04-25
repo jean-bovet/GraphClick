@@ -47,8 +47,8 @@
 		[self sortDeformations];
 		if ([inCoder versionForClassName:@"GCFrame"] >= 2)
 			mMask = [[inCoder decodeObject] retain];
-		[inCoder decodeValueOfObjCType:@encode(NSPoint) at:&mMin];
-		[inCoder decodeValueOfObjCType:@encode(NSPoint) at:&mMax];
+		mMin = [[inCoder decodeObject] pointValue];
+		mMax = [[inCoder decodeObject] pointValue];
 		[inCoder decodeValueOfObjCType:@encode(GCScale) at:&mXScale];
 		[inCoder decodeValueOfObjCType:@encode(GCScale) at:&mYScale];
 		if ([inCoder versionForClassName:@"GCFrame"] >= 3)
@@ -72,8 +72,8 @@
 		[inCoder encodeObject:mDeformations];
 	if ([GCFrame version] >= 2)
 		[inCoder encodeObject:mMask];
-	[inCoder encodeValueOfObjCType:@encode(NSPoint) at:&mMin];
-	[inCoder encodeValueOfObjCType:@encode(NSPoint) at:&mMax];
+	[inCoder encodeObject:[NSValue valueWithPoint:mMin]];
+	[inCoder encodeObject:[NSValue valueWithPoint:mMax]];
 	[inCoder encodeValueOfObjCType:@encode(GCScale) at:&mXScale];
 	[inCoder encodeValueOfObjCType:@encode(GCScale) at:&mYScale];
 	if ([inCoder versionForClassName:@"GCFrame"] >= 3)
@@ -595,7 +595,7 @@ float unscale(float x, GCScale scale, float min, float max)
 
 @implementation GCFrame (Deformation)
 
-int compareDeformations(id a, id b, void *context)
+NSInteger compareDeformations(id a, id b, void *context)
 {
 	float delta = [(GCDeformation *)b offset] - [(GCDeformation *)a offset];
 	return delta == 0 ? 0 : delta < 0 ? -1 : 1;
@@ -662,7 +662,7 @@ int compareDeformations(id a, id b, void *context)
 
 -(float)offsetOfDeformationAtIndex:(unsigned)inIndex
 {
-	return [[mDeformations objectAtIndex:inIndex] offset];
+	return [(GCDeformation *)[mDeformations objectAtIndex:inIndex] offset];
 }
 
 -(NSPoint)positionOfDeformationAtIndex:(unsigned)inIndex leftSide:(BOOL)inLeft
@@ -690,7 +690,7 @@ int compareDeformations(id a, id b, void *context)
 	unsigned i = 0;
 	float y0 = 0.0;
 	float y1;
-	while (i < n && inPoint.y > (y1 = [[mDeformations objectAtIndex:n - i - 1] offset])) {
+	while (i < n && inPoint.y > (y1 = [(GCDeformation *)[mDeformations objectAtIndex:n - i - 1] offset])) {
 		y0 = y1;
 		i++;
 	}
@@ -729,13 +729,13 @@ int compareDeformations(id a, id b, void *context)
 	float beforeOffset = 0.0;
 	if (i > 0) {
 		before = [(GCDeformation *)[mDeformations objectAtIndex:n - i] position];
-		beforeOffset = [[mDeformations objectAtIndex:n - i] offset];
+		beforeOffset = [(GCDeformation *)[mDeformations objectAtIndex:n - i] offset];
 	}
 	NSPoint after = NSMakePoint(0.0, 1.0);
 	float afterOffset = 1.0;
 	if (i < n) {
 		after = [(GCDeformation *)[mDeformations objectAtIndex:n - i - 1] position];
-		afterOffset = [[mDeformations objectAtIndex:n - i -1] offset];
+		afterOffset = [(GCDeformation *)[mDeformations objectAtIndex:n - i -1] offset];
 	}
 	
 	float k = (inPoint.y - y0) / (y1 - y0);

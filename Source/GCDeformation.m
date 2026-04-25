@@ -21,7 +21,7 @@
 {
 	if (self = [super init]) {
 		mFrame = [inCoder decodeObject];
-		[inCoder decodeValueOfObjCType:@encode(NSPoint) at:&mPosition];
+		mPosition = [[inCoder decodeObject] pointValue];
 		[inCoder decodeValueOfObjCType:@encode(float) at:&mOffset];
 	}
 	return self;
@@ -30,7 +30,7 @@
 -(void)encodeWithCoder:(NSCoder *)inCoder
 {
 	[inCoder encodeConditionalObject:mFrame]; 
-	[inCoder encodeValueOfObjCType:@encode(NSPoint) at:&mPosition];
+	[inCoder encodeObject:[NSValue valueWithPoint:mPosition]];
 	[inCoder encodeValueOfObjCType:@encode(float) at:&mOffset];
 }
 
