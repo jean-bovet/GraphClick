@@ -2587,9 +2587,9 @@ static BOOL sDontFocus = NO;
 {
 	BOOL ok = NO;
 	
-	NSImage *image = [[[NSImage alloc] initWithContentsOfURL:inURL] autorelease];
-	NSMovie *movie = nil;
-    
+	GCMovie *movie = [[[GCMovie alloc] initWithURL:inURL] autorelease];
+	NSImage *image = movie ? nil : [[[NSImage alloc] initWithContentsOfURL:inURL] autorelease];
+
 	if (image) {
 		image = [self checkedImage:image];
 		if (inUser) {
@@ -3109,10 +3109,8 @@ static BOOL sDontFocus = NO;
 	return mMovie != nil;
 }
 
--(void)setMovie:(NSMovie *)inMovie
+-(void)setMovie:(GCMovie *)inMovie
 {
-	if ([inMovie QTMovie] == nil)
-		inMovie = nil;
 	if (!(mMovie == nil && inMovie == nil) && ![[mMovie URL] isEqual:[inMovie URL]]) {
 		[mFrame beginEditing];
 		[self removeURL];
@@ -3130,7 +3128,7 @@ static BOOL sDontFocus = NO;
 	}
 }
 
--(void)setMovieAsUser:(NSMovie *)inMovie
+-(void)setMovieAsUser:(GCMovie *)inMovie
 {
 	[self setMovie:inMovie];
 	[self performSelector:@selector(autoAdjustCoordinates:) withObject:nil afterDelay:0.0];
@@ -3315,7 +3313,7 @@ static BOOL sDontFocus = NO;
 
 static NSConditionLock *sMovieImageLock = nil;
 static GCView *sMovieImageTarget = nil;
-static NSMovie *sMovieImageMovie = nil;
+static GCMovie *sMovieImageMovie = nil;
 static float sMovieImageTime;
 
 -(void)movieImageThread:(id)inSender
@@ -3325,7 +3323,7 @@ static float sMovieImageTime;
 		[sMovieImageLock lockWhenCondition:1];
 		GCView *view = sMovieImageTarget;
 		sMovieImageTarget = nil;
-		NSMovie *movie = sMovieImageMovie;
+		GCMovie *movie = sMovieImageMovie;
 		sMovieImageMovie = nil;
 		float time = sMovieImageTime;
 		[sMovieImageLock unlockWithCondition:0];

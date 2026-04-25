@@ -378,18 +378,18 @@
 	return [NSArray arrayWithObjects:@"infoTextViewData", @"lastExportLocation", nil];
 }
 
--(NSData *)dataRepresentationOfType:(NSString *)inType
+-(NSData *)dataOfType:(NSString *)inType error:(NSError **)outError
 {
 	NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 	[dictionary setObject:mFrame forKey:@"Frame"];
 	[dictionary setObject:[mView parameters] forKey:@"ViewParameters"];
 	[dictionary setObject:[NSPropertyListSerialization dataFromPropertyList:mSettings format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil] forKey:@"SettingsData"];
-	
+
 	NSMutableDictionary *docParameters = [NSMutableDictionary dictionary];
 	[docParameters setObject:[NSValue valueWithSize:[(NSView *)[mDocumentWindow contentView] frame].size] forKey:@"ContentSize"];
 	[docParameters setBool:[self transparent] forKey:@"Transparent"];
 	[dictionary setObject:docParameters forKey:@"DocumentParameters"];
-	
+
 	id value;
 	NSEnumerator *enumerator = [[self keysOfValuesToSaveWithFile] objectEnumerator];
 	NSString *key;
@@ -400,9 +400,22 @@
 	return [NSKeyedArchiver archivedDataWithRootObject:dictionary];
 }
 
--(BOOL)loadDataRepresentation:(NSData *)inData ofType:(NSString *)inType
+-(BOOL)readFromData:(NSData *)inData ofType:(NSString *)inType error:(NSError **)outError
 {
-	NSDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
+	NSDictionary *dictionary = nil;
+	@try {
+		dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
+	} @catch (NSException *exception) {
+		if (outError)
+			*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError
+										userInfo:@{NSLocalizedDescriptionKey: [exception reason] ?: @"corrupt GraphClick document"}];
+		return NO;
+	}
+	if (!dictionary) {
+		if (outError)
+			*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError userInfo:nil];
+		return NO;
+	}
 	[self willChangeValueForKey:@"frame"];
 	[mFrame release];
 	mFrame = [[dictionary objectForKey:@"Frame"] retain];

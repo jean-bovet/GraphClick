@@ -7,8 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GCApplicationDelegate.h"
 
 int main(int argc, char *argv[])
 {
+    // Force-reference GCApplicationDelegate so modern linker dead-stripping
+    // doesn't drop the nib-only-referenced NSDocumentController subclass.
+    (void)[GCApplicationDelegate class];
     return NSApplicationMain(argc, (const char **) argv);
 }

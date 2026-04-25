@@ -111,17 +111,6 @@
 
 @end
 
-@interface NSMovie (GCFoundation)
-
--(float)duration;
--(NSImage *)imageAtTime:(float)inTime;
--(NSImage *)imageAtTimeFromPoster:(float)inTime;
-
--(float)posterTime;
--(void)setPosterTime:(float)inTime;
-
-@end
-
 @interface NSBezierPath (RoundRect)
 
 +(NSBezierPath *)bezierPathWithRoundRectInRect:(NSRect)aRect radius:(float)radius;

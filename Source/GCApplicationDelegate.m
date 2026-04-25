@@ -27,7 +27,7 @@
 @implementation GCApplicationDelegate
 
 +(void)initialize
-{	
+{
 	[NSValueTransformer setValueTransformer:[[[GCZoomFactorTransformer alloc] init] autorelease] forName:@"GCZoomFactorTransformer"];
 	[NSValueTransformer setValueTransformer:[[[GCAngleTransformer alloc] init] autorelease] forName:@"GCAngleTransformer"];
 	[NSValueTransformer setValueTransformer:[[[GCPercentTransformer alloc] init] autorelease] forName:@"GCPercentTransformer"];
@@ -230,39 +230,23 @@ BOOL sDisplayLicenseAgreement = NO;
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:NSLocalizedString(@"Homepage URL", @"")]];
 }
 
--(id)openDocumentWithContentsOfFile:(NSString *)inFileName display:(BOOL)inFlag
+-(void)openDocumentWithContentsOfURL:(NSURL *)inURL display:(BOOL)inDisplay
+					completionHandler:(void (^)(NSDocument *, BOOL, NSError *))inCompletionHandler
 {
-//	if (sDisplayLicenseAgreement)
-//		return [NSNull null];
-
-//	if ([[inFileName pathExtension] isEqual:@"graphclicklicense"]) {
-//		NSError *error = nil;
-//		NSStringEncoding encoding = NSUTF8StringEncoding;
-//		NSString *string = [NSString stringWithContentsOfFile:inFileName encoding:encoding error:&error];
-//		if (string)
-//			[[ARRegisterManager sharedManager] registerDirectlyWithString:string];
-//	}
-	
-	id document = [super openDocumentWithContentsOfFile:inFileName display:inFlag];
-	if (!document) {
-		document = [self currentDocument];
-		if ([document isKindOfClass:[GCDocument class]])
-			[[document mainWindow] makeKeyAndOrderFront:nil];
-	}
-	return document;
-}
-
--(id)makeDocumentWithContentsOfFile:(NSString *)inFileName ofType:(NSString *)inDocType
-{
-	if ([inDocType isEqual:@"GraphClick Image"] || [inDocType isEqual:@"GraphClick Movie"]) {
-		GCDocument *document = [self currentDocument];
+	NSString *type = [self typeForContentsOfURL:inURL error:NULL];
+	if ([type isEqual:@"GraphClick Image"] || [type isEqual:@"GraphClick Movie"]) {
+		GCDocument *document = (GCDocument *)[self currentDocument];
 		if (![document isKindOfClass:[GCDocument class]])
-			document = 	[self openUntitledDocumentOfType:@"GraphClick Document" display:YES];
-		if (document)
-			[[document view] setURL:[NSURL fileURLWithPath:inFileName]];
-		return nil;
-	} else
-		return [super makeDocumentWithContentsOfFile:inFileName ofType:inDocType];
+			document = (GCDocument *)[self openUntitledDocumentAndDisplay:inDisplay error:NULL];
+		if (document) {
+			[[document view] setURL:inURL];
+			[[document mainWindow] makeKeyAndOrderFront:nil];
+		}
+		if (inCompletionHandler)
+			inCompletionHandler(document, NO, nil);
+		return;
+	}
+	[super openDocumentWithContentsOfURL:inURL display:inDisplay completionHandler:inCompletionHandler];
 }
 
 -(IBAction)showPreferences:(id)inSender

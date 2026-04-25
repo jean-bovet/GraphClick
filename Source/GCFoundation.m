@@ -8,7 +8,6 @@
 
 #import "GCFoundation.h"
 
-//#import <QuickTime/QuickTime.h>
 #import "GCNumberFormatter.h"
 
 #define GCDefaultsValueDidChangeNotification @"GCDefaultsValueDidChangeNotification"
@@ -491,59 +490,6 @@
 }
 
 @end
-
-/*
-@implementation NSMovie (GCFoundation)
-
--(float)duration
-{
-	Movie movie = [self QTMovie];
-	return (float)GetMovieDuration(movie) / GetMovieTimeScale(movie);
-}
-
--(NSImage *)imageAtTimeValue:(TimeValue)inTime
-{
-	Movie movie = [self QTMovie];
-	SetMovieTimeValue(movie, inTime);
-	NSImage *image = nil;
-	PicHandle picture = GetMoviePict(movie, inTime);
-	if (picture) {
-		NSData *data = [NSData dataWithBytes:*picture length:GetHandleSize((Handle)picture)];
-		NSImageRep *imageRep = [NSPICTImageRep imageRepWithData:data];
-		image = [[[NSImage alloc] initWithSize:[imageRep size]] autorelease];
-		[image lockFocus];
-		[imageRep drawAtPoint:NSZeroPoint];
-		[image unlockFocus];
-		KillPicture(picture);
-	}
-	return image;
-}
-
--(NSImage *)imageAtTime:(float)inTime
-{
-	return [self imageAtTimeValue:round(inTime * GetMovieTimeScale([self QTMovie]))];
-}
-
--(NSImage *)imageAtTimeFromPoster:(float)inTime
-{
-	Movie movie = [self QTMovie];
-	return [self imageAtTimeValue:round(inTime * GetMovieTimeScale(movie)) + GetMoviePosterTime(movie)];
-}
-
--(float)posterTime
-{
-	Movie movie = [self QTMovie];
-	return (float)GetMoviePosterTime(movie) / GetMovieTimeScale(movie);
-}
-
--(void)setPosterTime:(float)inTime
-{
-	Movie movie = [self QTMovie];
-	SetMoviePosterTime(movie, round(inTime * GetMovieTimeScale(movie)));
-}
-
-@end
-*/
 
 @implementation NSBezierPath (RoundRect)
 

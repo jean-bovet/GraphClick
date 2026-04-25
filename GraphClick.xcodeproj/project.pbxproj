@@ -129,6 +129,9 @@
 		A7ACE53C079B2A1900200ED0 /* MC_Start_Hi.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE52E079B2A1900200ED0 /* MC_Start_Hi.tiff */; };
 		A7ACE699079B3AF100200ED0 /* media.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE698079B3AF100200ED0 /* media.tif */; };
 		A7B4B2AD07661C550029E450 /* GCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4B2AB07661C540029E450 /* GCFoundation.m */; };
+		AA000000000000000000BE03 /* GCMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE02 /* GCMovie.m */; };
+		AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE04 /* AVFoundation.framework */; };
+		AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE06 /* CoreMedia.framework */; };
 		A7B4B7A7076625320029E450 /* GCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4B7A5076625320029E450 /* GCWindow.m */; };
 		A7BC36AF0CD1FC5B008CC6A8 /* GCMercatorProjectionWizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7BC36AD0CD1FC5B008CC6A8 /* GCMercatorProjectionWizard.nib */; };
 		A7BC374F0CD22E0C008CC6A8 /* Mercator.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BC374E0CD22E0C008CC6A8 /* Mercator.png */; };
@@ -377,6 +380,10 @@
 		A7ACE698079B3AF100200ED0 /* media.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = media.tif; sourceTree = "<group>"; };
 		A7B4B2AA07661C540029E450 /* GCFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFoundation.h; sourceTree = "<group>"; };
 		A7B4B2AB07661C540029E450 /* GCFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFoundation.m; sourceTree = "<group>"; };
+		AA000000000000000000BE01 /* GCMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMovie.h; sourceTree = "<group>"; };
+		AA000000000000000000BE02 /* GCMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMovie.m; sourceTree = "<group>"; };
+		AA000000000000000000BE04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = /System/Library/Frameworks/AVFoundation.framework; sourceTree = "<absolute>"; };
+		AA000000000000000000BE06 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = /System/Library/Frameworks/CoreMedia.framework; sourceTree = "<absolute>"; };
 		A7B4B7A4076625320029E450 /* GCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCWindow.h; sourceTree = "<group>"; };
 		A7B4B7A5076625320029E450 /* GCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCWindow.m; sourceTree = "<group>"; };
 		A7BC36AE0CD1FC5B008CC6A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCMercatorProjectionWizard.nib; sourceTree = "<group>"; };
@@ -443,6 +450,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */,
+				AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +476,8 @@
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
 				A7FD1AF7088B04EE009F4204 /* Quartz.framework */,
+				AA000000000000000000BE04 /* AVFoundation.framework */,
+				AA000000000000000000BE06 /* CoreMedia.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -582,6 +593,8 @@
 			children = (
 				A7B4B2AA07661C540029E450 /* GCFoundation.h */,
 				A7B4B2AB07661C540029E450 /* GCFoundation.m */,
+				AA000000000000000000BE01 /* GCMovie.h */,
+				AA000000000000000000BE02 /* GCMovie.m */,
 				A78C79350775887700B84957 /* GCNumberFormatter.h */,
 				A78C79360775887700B84957 /* GCNumberFormatter.m */,
 				A7A3FC1F075FAE4100C6CE14 /* GCPoint.h */,
@@ -966,6 +979,7 @@
 				A7A3FD1E075FB64200C6CE14 /* GCView.m in Sources */,
 				A7A3FFAC076059D300C6CE14 /* GCFrame.m in Sources */,
 				A7B4B2AD07661C550029E450 /* GCFoundation.m in Sources */,
+				AA000000000000000000BE03 /* GCMovie.m in Sources */,
 				A7B4B7A7076625320029E450 /* GCWindow.m in Sources */,
 				A78C76130773228900B84957 /* GCPaletteView.m in Sources */,
 				A78C769C07732DB800B84957 /* GCApplicationDelegate.m in Sources */,

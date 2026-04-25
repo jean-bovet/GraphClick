@@ -10,6 +10,7 @@
 
 #import "GCSerie.h"
 #import "GCFrame.h"
+#import "GCMovie.h"
 
 #define GCImageWillChangeNotification @"GCImageWillChangeNotification"
 #define GCImageDidChangeNotification @"GCImageDidChangeNotification"
@@ -137,7 +138,7 @@ enum {
 	
 	GCHistogram *mHistogram;
 	
-	NSMovie *mMovie;
+	GCMovie *mMovie;
 	float mTime;
 	float mTimeStep;
 	BOOL mDisplayTimeFrameOnly;
@@ -302,8 +303,8 @@ enum {
 @interface GCView (Movie)
 
 -(BOOL)containsMovie;
--(void)setMovie:(NSMovie *)inMovie;
--(void)setMovieAsUser:(NSMovie *)inMovie;
+-(void)setMovie:(GCMovie *)inMovie;
+-(void)setMovieAsUser:(GCMovie *)inMovie;
 -(float)time;
 -(void)setTime:(float)inTime;
 -(void)setTime:(float)inTime wait:(BOOL)inWait;
