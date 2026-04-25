@@ -51,7 +51,7 @@ The bundled help book under `English.lproj/GraphClick Help/` is the primary user
 
 GraphClick is retired. The source is published here for historical interest and as a reference for anyone digitizing plots or building similar tools. It is no longer actively developed, and there is no official support channel — issues and pull requests may or may not receive a response.
 
-The last released version was 3.0.2; the `master` branch currently carries the unreleased 3.0.3 work (code signing and warning fixes, Numerical Recipes dependency removed). The `3.0.2` branch preserves the final shipping source.
+The final commercial release was 3.0.2 (2012). The `main` branch carries 3.1, a 2026 modernization that brings the source up to current macOS (Apple Silicon, Xcode 26), restores the QuickTime-era movie digitization on top of AVFoundation, replaces the deprecated `NSArchiver` document format with `NSKeyedArchiver`, and adds in-app auto-updates via Sparkle. See [`MODERNIZATION.md`](MODERNIZATION.md) for the full change log. The `3.0.2` branch preserves the final shipping source from the commercial era.
 
 ## Building
 

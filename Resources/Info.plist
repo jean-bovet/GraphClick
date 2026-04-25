@@ -122,7 +122,7 @@
 	<key>CFBundleExecutable</key>
 	<string>GraphClick</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Copyright 2012 Arizona Software</string>
+	<string>3.1, © 2004-12 Arizona Software (modernized 2026)</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>GraphClick Help</string>
 	<key>CFBundleHelpBookName</key>
@@ -136,15 +136,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.3</string>
+	<string>3.1</string>
 	<key>CFBundleSignature</key>
 	<string>GClk</string>
 	<key>CFBundleVersion</key>
-	<string>3.0.3</string>
+	<string>3.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2012 Arizona Software</string>
+	<string>Copyright 2004-2012 Arizona Software. Modernized 2026.</string>
 	<key>NSMainNibFile</key>
 	<string>GCMainMenu</string>
 	<key>NSPrincipalClass</key>
