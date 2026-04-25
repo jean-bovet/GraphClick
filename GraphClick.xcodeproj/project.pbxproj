@@ -1269,11 +1269,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARCheckForUpdates/universal/build/Deployment",
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARLicenseAgreement/universal/build/Deployment",
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARRegister/universal/build/Deployment",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
@@ -1458,11 +1454,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARCheckForUpdates/universal/build/Deployment",
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARLicenseAgreement/universal/build/Deployment",
-					"$(HOME)/Development/ArizonaSoftware/ArizonaFrameworks/ARRegister/universal/build/Deployment",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_FAST_OBJC_DISPATCH = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
