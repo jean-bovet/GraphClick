@@ -28,6 +28,8 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		5A0C0002000000000000000B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; };
+		5A0C0002000000000000000C /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A71E1B720804882800E85D9C /* GCOptionalAlert.nib in Resources */ = {isa = PBXBuildFile; fileRef = A71E1B700804882800E85D9C /* GCOptionalAlert.nib */; };
 		A7245C2A0797063B00905209 /* InspectorToolbarImage.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7245C290797063B00905209 /* InspectorToolbarImage.tiff */; };
 		A7245F2507972F4F00905209 /* GCInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7245F2307972F4F00905209 /* GCInspector.nib */; };
@@ -190,13 +192,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7D9BDAC0789C14A0013A643 /* CopyFiles */ = {
+		A7D9BDAC0789C14A0013A643 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5A0C0002000000000000000C /* Sparkle.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -442,6 +446,7 @@
 		A7FD1E98088B36D4009F4204 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCFilterController.nib; sourceTree = "<group>"; };
 		A7FD1EC8088B3BD3009F4204 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCFilterController.nib; sourceTree = "<group>"; };
 		A7FD1EC9088B3D0F009F4204 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCFilterController.nib; sourceTree = "<group>"; };
+		5A0C0002000000000000000A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +457,7 @@
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */,
 				AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */,
+				5A0C0002000000000000000B /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +484,7 @@
 				A7FD1AF7088B04EE009F4204 /* Quartz.framework */,
 				AA000000000000000000BE04 /* AVFoundation.framework */,
 				AA000000000000000000BE06 /* CoreMedia.framework */,
+				5A0C0002000000000000000A /* Sparkle.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -1266,10 +1273,15 @@
 		A730E7E4085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/GraphClick_Prefix.pch;
@@ -1277,6 +1289,10 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -1451,10 +1467,15 @@
 		A776CED808A2915E00C3D479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GraphClick.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_FAST_OBJC_DISPATCH = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1464,6 +1485,10 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",

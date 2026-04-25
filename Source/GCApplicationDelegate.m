@@ -26,6 +26,8 @@
 
 @implementation GCApplicationDelegate
 
+@synthesize updaterController = _updaterController;
+
 +(void)initialize
 {
 	[NSValueTransformer setValueTransformer:[[[GCZoomFactorTransformer alloc] init] autorelease] forName:@"GCZoomFactorTransformer"];
@@ -113,6 +115,30 @@
 {
 	[[ARAboutDialog sharedAboutDialog] show:nil];
 	[[ARAboutDialog sharedAboutDialog] performSelector:@selector(hide:) withObject:nil afterDelay:2.0];
+
+	self.updaterController = [[[SPUStandardUpdaterController alloc]
+	    initWithStartingUpdater:YES
+	            updaterDelegate:nil
+	         userDriverDelegate:nil] autorelease];
+
+	NSString *checkForUpdatesTitle = @"Check for Updates…";
+	NSMenu *appMenu = [[[NSApp mainMenu] itemAtIndex:0] submenu];
+	if (appMenu && ![appMenu itemWithTitle:checkForUpdatesTitle]) {
+		NSMenuItem *checkItem = [[[NSMenuItem alloc]
+		    initWithTitle:checkForUpdatesTitle
+		           action:@selector(checkForUpdate:)
+		    keyEquivalent:@""] autorelease];
+		[checkItem setTarget:self];
+		NSInteger aboutIndex = [appMenu indexOfItemWithTarget:nil andAction:@selector(orderFrontStandardAboutPanel:)];
+		if (aboutIndex < 0)
+			aboutIndex = [appMenu indexOfItemWithTarget:self andAction:@selector(showAboutBox:)];
+		[appMenu insertItem:checkItem atIndex:(aboutIndex >= 0 ? aboutIndex + 1 : 1)];
+	}
+}
+
+-(IBAction)checkForUpdate:(id)inSender
+{
+	[self.updaterController checkForUpdates:inSender];
 }
 
 -(void)awakeFromNib
@@ -124,6 +150,7 @@
 
 -(void)dealloc
 {
+	[_updaterController release];
 	[super dealloc];
 }
 
