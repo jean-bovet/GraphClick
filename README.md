@@ -4,6 +4,8 @@ GraphClick is a macOS application that extracts numerical data from the image of
 
 It was developed by [Arizona Software](http://www.arizona-software.ch/graphclick) (Jean Bovet) as a commercial product from 2004 through 2012 and is now retired. This repository is the final open-source release of the source code.
 
+![GraphClick digitizing a bar chart](docs/GraphClickDigitizing.gif)
+
 ## What it does
 
 Given an image of a plot, GraphClick helps you:
