@@ -97,16 +97,29 @@ RELEASE_NOTES_DIR="$DOCS_DIR/release-notes"
 if [[ -x "$GENERATE_APPCAST" ]]; then
     echo "==> Generating appcast"
     mkdir -p "$DOCS_DIR"
+
+    # generate_appcast produces one item per archive in its input directory and
+    # stamps every enclosure with the single --download-url-prefix below. Each
+    # GraphClick version ships in its own GitHub release (.../download/vX.Y.Z/),
+    # so handing it more than this version's DMG would rewrite older items with
+    # the wrong (this-release) URL and resurrect stale entries left in dist/.
+    # Generate from a clean directory holding ONLY this version's artifacts;
+    # prior versions keep their own correct URLs from the committed appcast.
+    APPCAST_STAGE="$(mktemp -d)"
+    trap 'rm -rf "$APPCAST_STAGE"' EXIT
+    cp "$DMG_PATH" "$APPCAST_STAGE/"
+
     # generate_appcast embeds release notes from a file sharing the archive's
-    # base name. Stage any committed notes for this version next to the DMG.
+    # base name; stage this version's notes alongside the DMG if present.
     for ext in html md txt; do
         NOTES_SRC="$RELEASE_NOTES_DIR/$APP_NAME-$VERSION.$ext"
         if [[ -f "$NOTES_SRC" ]]; then
-            cp "$NOTES_SRC" "$DIST_DIR/"
+            cp "$NOTES_SRC" "$APPCAST_STAGE/"
             echo "    using release notes $NOTES_SRC"
         fi
     done
-    "$GENERATE_APPCAST" "$DIST_DIR" \
+
+    "$GENERATE_APPCAST" "$APPCAST_STAGE" \
         --download-url-prefix "https://github.com/jean-bovet/GraphClick/releases/download/v$VERSION/" \
         -o "$DOCS_DIR/appcast.xml"
     echo "Appcast written to $DOCS_DIR/appcast.xml"
