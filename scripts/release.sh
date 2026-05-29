@@ -93,9 +93,19 @@ spctl --assess --type open --context context:primary-signature --verbose "$DMG_P
 
 GENERATE_APPCAST="$PROJECT_DIR/scripts/sparkle/generate_appcast"
 DOCS_DIR="$PROJECT_DIR/docs"
+RELEASE_NOTES_DIR="$DOCS_DIR/release-notes"
 if [[ -x "$GENERATE_APPCAST" ]]; then
     echo "==> Generating appcast"
     mkdir -p "$DOCS_DIR"
+    # generate_appcast embeds release notes from a file sharing the archive's
+    # base name. Stage any committed notes for this version next to the DMG.
+    for ext in html md txt; do
+        NOTES_SRC="$RELEASE_NOTES_DIR/$APP_NAME-$VERSION.$ext"
+        if [[ -f "$NOTES_SRC" ]]; then
+            cp "$NOTES_SRC" "$DIST_DIR/"
+            echo "    using release notes $NOTES_SRC"
+        fi
+    done
     "$GENERATE_APPCAST" "$DIST_DIR" \
         --download-url-prefix "https://github.com/jean-bovet/GraphClick/releases/download/v$VERSION/" \
         -o "$DOCS_DIR/appcast.xml"

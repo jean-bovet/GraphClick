@@ -99,6 +99,20 @@ outstanding.
   no longer referenced by code but remain in `Images/` and as
   resources in the bundle for now; can be removed in a follow-up.
 
+### Legacy document compatibility (3.1.1)
+- 3.1 switched document reading to `NSKeyedUnarchiver` and changed several
+  model classes to store geometry as `NSValue` objects. Together these meant
+  documents saved by GraphClick 3.0.x and earlier — which use the old
+  `NSArchiver` "typedstream" format with raw, 32-bit `float` point/rect
+  structs — could no longer be opened ("The file isn't in the correct
+  format").
+- Reading now falls back to `NSUnarchiver` when the keyed unarchiver cannot
+  read the data, and the point/rect decoders read either the new `NSValue`
+  form or the legacy float-based structs. The embedded guide blob in the view
+  parameters gets the same fallback.
+- Saving still uses `NSKeyedArchiver`, so opening an old document and saving it
+  transparently upgrades it to the current format.
+
 ## TODO
 
 ### Deprecated AppKit API (functional, but warned)
