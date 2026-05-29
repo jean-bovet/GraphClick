@@ -9,6 +9,7 @@
 #import "GCDeformation.h"
 
 #import "GCFrame.h"
+#import "GCFoundation.h"
 
 @implementation GCDeformation
 
@@ -21,7 +22,7 @@
 {
 	if (self = [super init]) {
 		mFrame = [inCoder decodeObject];
-		mPosition = [[inCoder decodeObject] pointValue];
+		mPosition = [inCoder gcDecodePoint];
 		[inCoder decodeValueOfObjCType:@encode(float) at:&mOffset];
 	}
 	return self;

@@ -34,6 +34,26 @@
 
 @end
 
+@interface NSCoder (GCFoundation)
+
+// Decodes a geometry value written either as an NSValue object (current keyed
+// format) or as a raw struct (legacy NSArchiver documents from GraphClick 3.0.x
+// and earlier). The keyed unarchiver reports allowsKeyedCoding == YES, the
+// legacy NSUnarchiver reports NO, which is how the two formats are told apart.
+-(NSPoint)gcDecodePoint;
+-(NSRect)gcDecodeRect;
+
+@end
+
+@interface NSData (GCFoundation)
+
+// Unarchives a root object encoded with either NSKeyedArchiver (the current
+// format) or the legacy NSArchiver "typedstream" format used by GraphClick
+// 3.0.x and earlier. Returns nil if neither decoder can read the data.
+-(id)gcUnarchivedRootObject;
+
+@end
+
 @interface NSDictionary (GCFoundation)
 
 -(BOOL)boolForKey:(id)inKey;

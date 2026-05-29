@@ -400,22 +400,27 @@
 	return [NSKeyedArchiver archivedDataWithRootObject:dictionary];
 }
 
+// Decodes the root dictionary of a GraphClick document.
+//
+// Current documents are keyed archives (NSKeyedArchiver). Documents saved by
+// GraphClick 3.0.x and earlier use the legacy NSArchiver "typedstream" format,
+// which NSKeyedUnarchiver cannot read, so we fall back to NSUnarchiver for them.
+// Re-saving such a document transparently upgrades it to the keyed-archive
+// format. Returns nil and fills outError if neither decoder can read the data.
++(NSDictionary *)documentDictionaryFromData:(NSData *)inData error:(NSError **)outError
+{
+	NSDictionary *dictionary = [inData gcUnarchivedRootObject];
+	if (!dictionary && outError)
+		*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError
+									userInfo:@{NSLocalizedDescriptionKey: @"The document is not a valid GraphClick file."}];
+	return dictionary;
+}
+
 -(BOOL)readFromData:(NSData *)inData ofType:(NSString *)inType error:(NSError **)outError
 {
-	NSDictionary *dictionary = nil;
-	@try {
-		dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:inData];
-	} @catch (NSException *exception) {
-		if (outError)
-			*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError
-										userInfo:@{NSLocalizedDescriptionKey: [exception reason] ?: @"corrupt GraphClick document"}];
+	NSDictionary *dictionary = [GCDocument documentDictionaryFromData:inData error:outError];
+	if (!dictionary)
 		return NO;
-	}
-	if (!dictionary) {
-		if (outError)
-			*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError userInfo:nil];
-		return NO;
-	}
 	[self willChangeValueForKey:@"frame"];
 	[mFrame release];
 	mFrame = [[dictionary objectForKey:@"Frame"] retain];

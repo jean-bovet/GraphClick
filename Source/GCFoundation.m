@@ -12,6 +12,62 @@
 
 #define GCDefaultsValueDidChangeNotification @"GCDefaultsValueDidChangeNotification"
 
+// Legacy GraphClick documents were archived on 32-bit builds, where NSPoint /
+// NSSize members were floats ("{_NSPoint=ff}"). On 64-bit they are doubles
+// ("{CGPoint=dd}"), and NSUnarchiver will not coerce one struct layout into the
+// other, so we decode into matching float-based structs and widen afterwards.
+typedef struct { float x; float y; } GCLegacyPoint;
+typedef struct { GCLegacyPoint origin; GCLegacyPoint size; } GCLegacyRect;
+
+@implementation NSCoder (GCFoundation)
+
+-(NSPoint)gcDecodePoint
+{
+	if ([self allowsKeyedCoding])
+		return [[self decodeObject] pointValue];
+	GCLegacyPoint point;
+	[self decodeValueOfObjCType:@encode(GCLegacyPoint) at:&point];
+	return NSMakePoint(point.x, point.y);
+}
+
+-(NSRect)gcDecodeRect
+{
+	if ([self allowsKeyedCoding])
+		return [[self decodeObject] rectValue];
+	GCLegacyRect rect;
+	[self decodeValueOfObjCType:@encode(GCLegacyRect) at:&rect];
+	return NSMakeRect(rect.origin.x, rect.origin.y, rect.size.x, rect.size.y);
+}
+
+@end
+
+@implementation NSData (GCFoundation)
+
+-(id)gcUnarchivedRootObject
+{
+	id object = nil;
+	@try {
+		object = [NSKeyedUnarchiver unarchiveObjectWithData:self];
+	} @catch (NSException *exception) {
+		object = nil;
+	}
+	// The keyed unarchiver throws or returns nil on legacy typedstream data, so
+	// fall back to NSUnarchiver whenever it produced nothing.
+	if (!object) {
+		@try {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+			object = [NSUnarchiver unarchiveObjectWithData:self];
+#pragma clang diagnostic pop
+		} @catch (NSException *legacyException) {
+			object = nil;
+		}
+	}
+	return object;
+}
+
+@end
+
 @implementation NSImage (GCFoundation)
 
 -(void)drawInRect:(NSRect)inRect

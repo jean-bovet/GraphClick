@@ -388,7 +388,7 @@
 		if ((value = [inParameters objectForKey:@"Guide"])) {
 			[self willChangeValueForKey:@"guide"];
 			[mGuide release];
-			mGuide = [[NSKeyedUnarchiver unarchiveObjectWithData:value] retain];
+			mGuide = [[value gcUnarchivedRootObject] retain];
 			[self didChangeValueForKey:@"guide"];
 		}
 	}

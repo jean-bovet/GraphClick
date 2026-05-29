@@ -8,16 +8,18 @@
 
 #import "GCMask.h"
 
+#import "GCFoundation.h"
+
 
 @implementation GCMask
 
 -(id)initWithCoder:(NSCoder *)inCoder
 {
 	if (self = [super init]) {
-		mBounds = [[inCoder decodeObject] rectValue];
+		mBounds = [inCoder gcDecodeRect];
 		mImage = [[inCoder decodeObject] retain];
 		if ([inCoder versionForClassName:@"GCMask"] >= 1)
-			mContentBounds = [[inCoder decodeObject] rectValue];
+			mContentBounds = [inCoder gcDecodeRect];
 		else
 			mContentBounds = mBounds;
 	}

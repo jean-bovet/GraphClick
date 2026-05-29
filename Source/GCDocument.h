@@ -54,6 +54,11 @@
 
 +(NSImage *)defaultImage;
 
+// Decodes the root dictionary of a GraphClick document, transparently handling
+// both the current keyed-archive format and the legacy NSArchiver format used
+// by GraphClick 3.0.x and earlier. Returns nil and fills outError on failure.
++(NSDictionary *)documentDictionaryFromData:(NSData *)inData error:(NSError **)outError;
+
 -(GCView *)view;
 -(NSWindow *)mainWindow;
 -(NSArray *)selectedSeries;

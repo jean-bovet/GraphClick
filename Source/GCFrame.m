@@ -47,8 +47,8 @@
 		[self sortDeformations];
 		if ([inCoder versionForClassName:@"GCFrame"] >= 2)
 			mMask = [[inCoder decodeObject] retain];
-		mMin = [[inCoder decodeObject] pointValue];
-		mMax = [[inCoder decodeObject] pointValue];
+		mMin = [inCoder gcDecodePoint];
+		mMax = [inCoder gcDecodePoint];
 		[inCoder decodeValueOfObjCType:@encode(GCScale) at:&mXScale];
 		[inCoder decodeValueOfObjCType:@encode(GCScale) at:&mYScale];
 		if ([inCoder versionForClassName:@"GCFrame"] >= 3)

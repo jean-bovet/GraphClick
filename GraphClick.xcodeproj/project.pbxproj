@@ -22,14 +22,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5A0C0002000000000000000B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; };
+		5A0C0002000000000000000C /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2D0486D014006FF6A4 /* GCMainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* GCMainMenu.nib */; };
 		8D15AC2E0486D014006FF6A4 /* GCDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* GCDocument.nib */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
-		5A0C0002000000000000000B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; };
-		5A0C0002000000000000000C /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0002000000000000000A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A71E1B720804882800E85D9C /* GCOptionalAlert.nib in Resources */ = {isa = PBXBuildFile; fileRef = A71E1B700804882800E85D9C /* GCOptionalAlert.nib */; };
 		A7245C2A0797063B00905209 /* InspectorToolbarImage.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7245C290797063B00905209 /* InspectorToolbarImage.tiff */; };
 		A7245F2507972F4F00905209 /* GCInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7245F2307972F4F00905209 /* GCInspector.nib */; };
@@ -72,7 +72,7 @@
 		A76334FE08B8EC210008D548 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334FD08B8EC210008D548 /* CoreFoundation.framework */; };
 		A763350008B8EC300008D548 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334FF08B8EC300008D548 /* ApplicationServices.framework */; };
 		A76335A608B8EC6E0008D548 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76335A508B8EC6E0008D548 /* Foundation.framework */; };
-		A76335D508B8ED260008D548 /* ThresholdUnit.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = A763336008B8E58F0008D548 /* ThresholdUnit.plugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A76335D508B8ED260008D548 /* ThresholdUnit.plugin in Copy ThresholdUnit Plug-in */ = {isa = PBXBuildFile; fileRef = A763336008B8E58F0008D548 /* ThresholdUnit.plugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A76B5D5C0792979700F1B429 /* GCHoleyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A76B5D5A0792979700F1B429 /* GCHoleyView.m */; };
 		A76C0155085132B300648BEA /* GCDeformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C0153085132B300648BEA /* GCDeformation.m */; };
 		A76C0351085132B300648BEA /* GCMask.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C034F085132B300648BEA /* GCMask.m */; };
@@ -131,9 +131,6 @@
 		A7ACE53C079B2A1900200ED0 /* MC_Start_Hi.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE52E079B2A1900200ED0 /* MC_Start_Hi.tiff */; };
 		A7ACE699079B3AF100200ED0 /* media.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7ACE698079B3AF100200ED0 /* media.tif */; };
 		A7B4B2AD07661C550029E450 /* GCFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4B2AB07661C540029E450 /* GCFoundation.m */; };
-		AA000000000000000000BE03 /* GCMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE02 /* GCMovie.m */; };
-		AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE04 /* AVFoundation.framework */; };
-		AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE06 /* CoreMedia.framework */; };
 		A7B4B7A7076625320029E450 /* GCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4B7A5076625320029E450 /* GCWindow.m */; };
 		A7BC36AF0CD1FC5B008CC6A8 /* GCMercatorProjectionWizard.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7BC36AD0CD1FC5B008CC6A8 /* GCMercatorProjectionWizard.nib */; };
 		A7BC374F0CD22E0C008CC6A8 /* Mercator.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BC374E0CD22E0C008CC6A8 /* Mercator.png */; };
@@ -162,9 +159,22 @@
 		A7FD1A46088AFF8F009F4204 /* GCFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FD1A44088AFF8F009F4204 /* GCFilterController.m */; };
 		A7FD1B33088B052A009F4204 /* GCFilterController.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7FD1B31088B052A009F4204 /* GCFilterController.nib */; };
 		A7FD1E7B088B32B3009F4204 /* MagnifyingGlass.tif in Resources */ = {isa = PBXBuildFile; fileRef = A7FD1E7A088B32B3009F4204 /* MagnifyingGlass.tif */; };
+		AA000000000000000000BE03 /* GCMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE02 /* GCMovie.m */; };
+		AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE04 /* AVFoundation.framework */; };
+		AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BE06 /* CoreMedia.framework */; };
+		B2771135856922573A4F4C2D /* GCDocumentLegacyFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CFD732A39B3B000757B855 /* GCDocumentLegacyFormatTests.m */; };
+		CEE7E3A28DDBA535A3C8E717 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 79072CC8B23712DD13F49055 /* Fixtures */; };
+		CF1D571E35B09FB7BDA1A0AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239A35F4E59B6CF31E4D602A /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7A1037C39AF8E8407FAEBF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
+			remoteInfo = GraphClick;
+		};
 		A7614AD308B927230041B1A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
@@ -182,13 +192,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A76335D108B8ED200008D548 /* CopyFiles */ = {
+		A76335D108B8ED200008D548 /* Copy ThresholdUnit Plug-in */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A76335D508B8ED260008D548 /* ThresholdUnit.plugin in CopyFiles */,
+				A76335D508B8ED260008D548 /* ThresholdUnit.plugin in Copy ThresholdUnit Plug-in */,
 			);
 			name = "Copy ThresholdUnit Plug-in";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +218,10 @@
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		100B15AECFBEEDA04C26FE34 /* GraphClickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphClickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		10CFD732A39B3B000757B855 /* GCDocumentLegacyFormatTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDocumentLegacyFormatTests.m; path = GCDocumentLegacyFormatTests.m; sourceTree = "<group>"; };
+		239A35F4E59B6CF31E4D602A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCDocument.nib; sourceTree = "<group>"; };
 		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCMainMenu.nib; sourceTree = "<group>"; };
@@ -216,6 +229,8 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* GraphClick_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphClick_Prefix.pch; sourceTree = "<group>"; };
+		5A0C0002000000000000000A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		79072CC8B23712DD13F49055 /* Fixtures */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Fixtures; path = Fixtures; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* GraphClick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphClick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7059595081519F2002E6640 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = German; path = German.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A7059596081519F2002E6640 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCGeometryInfo.nib; sourceTree = "<group>"; };
@@ -385,10 +400,6 @@
 		A7ACE698079B3AF100200ED0 /* media.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = media.tif; sourceTree = "<group>"; };
 		A7B4B2AA07661C540029E450 /* GCFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFoundation.h; sourceTree = "<group>"; };
 		A7B4B2AB07661C540029E450 /* GCFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFoundation.m; sourceTree = "<group>"; };
-		AA000000000000000000BE01 /* GCMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMovie.h; sourceTree = "<group>"; };
-		AA000000000000000000BE02 /* GCMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMovie.m; sourceTree = "<group>"; };
-		AA000000000000000000BE04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = /System/Library/Frameworks/AVFoundation.framework; sourceTree = "<absolute>"; };
-		AA000000000000000000BE06 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = /System/Library/Frameworks/CoreMedia.framework; sourceTree = "<absolute>"; };
 		A7B4B7A4076625320029E450 /* GCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCWindow.h; sourceTree = "<group>"; };
 		A7B4B7A5076625320029E450 /* GCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCWindow.m; sourceTree = "<group>"; };
 		A7BC36AE0CD1FC5B008CC6A8 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GCMercatorProjectionWizard.nib; sourceTree = "<group>"; };
@@ -447,7 +458,10 @@
 		A7FD1E98088B36D4009F4204 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/GCFilterController.nib; sourceTree = "<group>"; };
 		A7FD1EC8088B3BD3009F4204 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/GCFilterController.nib; sourceTree = "<group>"; };
 		A7FD1EC9088B3D0F009F4204 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/GCFilterController.nib; sourceTree = "<group>"; };
-		5A0C0002000000000000000A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		AA000000000000000000BE01 /* GCMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMovie.h; sourceTree = "<group>"; };
+		AA000000000000000000BE02 /* GCMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMovie.m; sourceTree = "<group>"; };
+		AA000000000000000000BE04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = /System/Library/Frameworks/AVFoundation.framework; sourceTree = "<absolute>"; };
+		AA000000000000000000BE06 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = /System/Library/Frameworks/CoreMedia.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +473,14 @@
 				AA000000000000000000BE05 /* AVFoundation.framework in Frameworks */,
 				AA000000000000000000BE07 /* CoreMedia.framework in Frameworks */,
 				5A0C0002000000000000000B /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD236EC2879FAA40149AF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1D571E35B09FB7BDA1A0AA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,11 +517,12 @@
 			children = (
 				8D15AC370486D014006FF6A4 /* GraphClick.app */,
 				A763336008B8E58F0008D548 /* ThresholdUnit.plugin */,
+				100B15AECFBEEDA04C26FE34 /* GraphClickTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A37F4AAFDCFA73011CA2CEA /* GraphClick */ = {
+		2A37F4AAFDCFA73011CA2CEA = {
 			isa = PBXGroup;
 			children = (
 				A7F166AA165F4201009A8D2F /* GraphClick.entitlements */,
@@ -510,6 +533,7 @@
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 				A763336908B8E5970008D548 /* ThresholdUnit */,
+				B5EEA1C19C9F8FFB2AB2A9D0 /* Tests */,
 			);
 			name = GraphClick;
 			sourceTree = "<group>";
@@ -572,8 +596,17 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+				5C30F54768AEC886B90A8E91 /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C30F54768AEC886B90A8E91 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				239A35F4E59B6CF31E4D602A /* Cocoa.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		A763336908B8E5970008D548 /* ThresholdUnit */ = {
@@ -761,6 +794,16 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		B5EEA1C19C9F8FFB2AB2A9D0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				10CFD732A39B3B000757B855 /* GCDocumentLegacyFormatTests.m */,
+				79072CC8B23712DD13F49055 /* Fixtures */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -771,8 +814,8 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
-				A7D9BDAC0789C14A0013A643 /* CopyFiles */,
-				A76335D108B8ED200008D548 /* CopyFiles */,
+				A7D9BDAC0789C14A0013A643 /* Embed Frameworks */,
+				A76335D108B8ED200008D548 /* Copy ThresholdUnit Plug-in */,
 				A797A51E0795AFCF006D335A /* ShellScript */,
 			);
 			buildRules = (
@@ -803,6 +846,24 @@
 			productReference = A763336008B8E58F0008D548 /* ThresholdUnit.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
+		CA341489E4B35B9EA6DBB267 /* GraphClickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8B9DFFC326B33908C7ED84 /* Build configuration list for PBXNativeTarget "GraphClickTests" */;
+			buildPhases = (
+				79A3DB1841DC8F6AE309BC8E /* Sources */,
+				9BD236EC2879FAA40149AF5F /* Frameworks */,
+				84CFF28324C609DF32EDBC03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA8720C7748BBBF7B3FB4DE /* PBXTargetDependency */,
+			);
+			name = GraphClickTests;
+			productName = GraphClickTests;
+			productReference = 100B15AECFBEEDA04C26FE34 /* GraphClickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -832,18 +893,28 @@
 				German,
 				Italian,
 			);
-			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* GraphClick */;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA;
+			productRefGroup = 19C28FB0FE9D524F11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A7614AD208B9271C0041B1A1 /* GraphClick Aggregate */,
 				8D15AC270486D014006FF6A4 /* GraphClick */,
 				A763335F08B8E58F0008D548 /* ThresholdUnit */,
+				CA341489E4B35B9EA6DBB267 /* GraphClickTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84CFF28324C609DF32EDBC03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE7E3A28DDBA535A3C8E717 /* Fixtures in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -976,6 +1047,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		79A3DB1841DC8F6AE309BC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2771135856922573A4F4C2D /* GCDocumentLegacyFormatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC300486D014006FF6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1043,6 +1122,12 @@
 			isa = PBXTargetDependency;
 			target = A763335F08B8E58F0008D548 /* ThresholdUnit */;
 			targetProxy = A7614AD508B927260041B1A1 /* PBXContainerItemProxy */;
+		};
+		FAA8720C7748BBBF7B3FB4DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GraphClick;
+			target = 8D15AC270486D014006FF6A4 /* GraphClick */;
+			targetProxy = 7A1037C39AF8E8407FAEBF52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1271,6 +1356,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		698B12E2C6DD5486D681FE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.graphclick.tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphClick.app/Contents/MacOS/GraphClick";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Source";
+			};
+			name = Debug;
+		};
+		8EF3C1535E0568A96F0B1793 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.graphclick.tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphClick.app/Contents/MacOS/GraphClick";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Source";
+			};
+			name = Release;
+		};
 		A730E7E4085DBAB70015E249 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1290,10 +1407,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -1486,10 +1600,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -1580,6 +1691,15 @@
 			buildConfigurations = (
 				A763336408B8E5900008D548 /* Release */,
 				A763336508B8E5900008D548 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC8B9DFFC326B33908C7ED84 /* Build configuration list for PBXNativeTarget "GraphClickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EF3C1535E0568A96F0B1793 /* Release */,
+				698B12E2C6DD5486D681FE3C /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

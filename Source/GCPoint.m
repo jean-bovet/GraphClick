@@ -10,6 +10,7 @@
 
 #import "GCSerie.h"
 #import "GCFrame.h"
+#import "GCFoundation.h"
 
 static float sTime = 0.0;
 
@@ -19,7 +20,7 @@ static float sTime = 0.0;
 {
 	if (self = [self init]) {
 		mSerie = [inCoder decodeObject];
-		mPoint = [[inCoder decodeObject] pointValue];
+		mPoint = [inCoder gcDecodePoint];
 		if ([inCoder versionForClassName:@"GCPoint"] >= 1) {
 			[inCoder decodeValueOfObjCType:@encode(float) at:&mXMinError];
 			[inCoder decodeValueOfObjCType:@encode(float) at:&mXMaxError];
