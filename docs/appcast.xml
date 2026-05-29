@@ -3,12 +3,26 @@
     <channel>
         <title>GraphClick</title>
         <item>
-            <title>3.1</title>
-            <pubDate>Sat, 25 Apr 2026 07:49:51 -0700</pubDate>
-            <sparkle:version>3.1</sparkle:version>
-            <sparkle:shortVersionString>3.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/jean-bovet/GraphClick/releases/download/v3.1/GraphClick-3.1.dmg" length="3239122" type="application/octet-stream" sparkle:edSignature="yBU++VJUqD+506ws1i2K49uq3DM/1VhpXTNbFq/Zg0DCYnXCCmqmNN3CKrIZNYQaQO3nPD/2RkSPcC8DeZlACQ=="/>
+            <title>3.1.1</title>
+            <pubDate>Fri, 29 May 2026 12:00:21 +0200</pubDate>
+            <sparkle:version>3.1.1</sparkle:version>
+            <sparkle:shortVersionString>3.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h2>GraphClick 3.1.1</h2>
+<p>This release restores compatibility with older GraphClick documents.</p>
+<ul>
+    <li><strong>Opens documents from GraphClick 3.0.x and earlier again.</strong>
+        Files saved by older versions use the original document format, which
+        3.1 could no longer read &mdash; they failed with &ldquo;The file
+        isn&rsquo;t in the correct format.&rdquo; Those documents now open
+        normally.</li>
+    <li>Opening such a document and saving it upgrades it to the current format.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/jean-bovet/GraphClick/releases/download/v3.1.1/GraphClick-3.1.1.dmg" length="3239497" type="application/octet-stream" sparkle:edSignature="Iv0nsWS61cgvHM4UxZab017i3vRCUPp3upR9+S+ZVB5ryg+xnBFEZefeBcG5hjPr+qGkOHnrItHnYIIdk/MzAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/jean-bovet/GraphClick/releases/download/v3.1.1/GraphClick3.1.1-3.1.delta" sparkle:deltaFrom="3.1" length="102206" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PogmNGOZTwBw7EFYOVCJwDVUfLz0IDCQPFMWfdiakL5hOXpbHGCh+ykjw1/vCQid3kVYnAhs+uW7iLDytesICw=="/>
+            </sparkle:deltas>
         </item>
     </channel>
 </rss>
