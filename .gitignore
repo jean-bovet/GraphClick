@@ -19,3 +19,5 @@ dist/
 # Drop a legacy/keyed .gc document here to exercise GraphClickTests.
 Tests/Fixtures/*.gc
 .claude/worktrees/
+
+*.local.xcconfig
