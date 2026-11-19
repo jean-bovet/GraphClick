@@ -18,3 +18,4 @@ dist/
 # Local test fixtures (may be user documents; not for the public repo).
 # Drop a legacy/keyed .gc document here to exercise GraphClickTests.
 Tests/Fixtures/*.gc
+.claude/worktrees/
